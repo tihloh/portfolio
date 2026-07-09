@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Christian Bustamante | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top right, #2563eb22, transparent 30%),
+                radial-gradient(circle at bottom left, #9333ea22, transparent 35%);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, .08);
+        }
+
+        .glass-hover {
+            transition: .4s;
+        }
+
+        .glass-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, .18);
+        }
+
+        .glow {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(37, 99, 235, .18), transparent);
+            filter: blur(140px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .firefly {
+            position: absolute;
+            font-family: consolas, monospace;
+            font-weight: 100;
+            color: rgba(255, 255, 255, .3);
+            text-shadow: 0 0 12px rgba(59, 130, 246, .2);
+            animation: fade var(--life) ease-in-out;
+            user-select: none;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            85% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+    <div class="glow"></div>
+    <div id="fireflies" class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]"></div>
+
+    <div class="fixed inset-0 pointer-events-none opacity-[0.3] z-[-2] bg-repeat bg-[length:300px]"
+        style="background-image:url('images/bg-circuit.png')">
+    </div>
+
+    <nav class="sticky top-0 z-50 backdrop-blur-sm">
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-6 pt-4">
+
+            <div class="glass rounded-3xl px-6 lg:px-8 min-h-16 py-3 flex items-center justify-between">
+
+                <!-- LEFT -->
+
+                <a href="#hero" class="group">
+
+                    <h1 class="font-bold text-lg lg:text-xl transition group-hover:text-blue-400">
+                        Christian Bustamante
+                    </h1>
+
+                    <div class="text-xs text-zinc-400">
+                        Software Developer • IT • Systems • Automation
+                    </div>
+
+                </a>
+
+                <!-- RIGHT -->
+
+                <div class="hidden lg:flex items-center gap-7 text-sm">
+
+                    <a href="#about" class="text-zinc-300 hover:text-blue-400 transition"> About </a>
+                    <a href="#experience" class="text-zinc-300 hover:text-blue-400 transition"> Journey </a>
+                    <a href="#skills" class="text-zinc-300 hover:text-blue-400 transition"> Expertise </a>
+                    <a href="#projects" class="text-zinc-300 hover:text-blue-400 transition"> Projects </a>
+                    <a href="#platforms" class="text-zinc-300 hover:text-blue-400 transition"> Tech </a>
+                    <a href="#certificates" class="text-zinc-300 hover:text-blue-400 transition"> Certifications </a>
+                    <a href="#contact" class="glass px-5 py-2 rounded-2xl hover:border-blue-500 transition"> Contact
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <section class="max-w-7xl mx-auto px-5 lg:px-6 py-12 lg:py-20">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+
+            <div class="text-center lg:text-left">
+
+                <p class="text-green-400 uppercase tracking-[0.25em]">
+                    Full Stack Developer • IT • Automation
+                </p>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black mt-6 leading-[1]">
+
+                    Building
+
+                    <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                        Software
+                    </span>
+
+                    That Solves
+                    Real Problems
+
+                </h1>
+
+                <p class="mt-8 text-base sm:text-lg lg:text-xl text-zinc-300 leading-8 max-w-2xl mx-auto lg:mx-0">
+
+                    Full Stack Developer specializing in software systems, with experience in IT operations,
+                    infrastructure, automation, hardware integration and business solutions.
+
+                </p>
+
+                <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
+
+                    <a href="#projects" class="glass glass-hover px-8 py-4 rounded-2xl">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="glass glass-hover px-8 py-4 rounded-2xl">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="relative flex justify-center items-end min-h-[420px] lg:min-h-[720px]">
+
+                <div
+                    class="absolute bottom-20 w-[300px] lg:w-[420px] h-[300px] lg:h-[420px] rounded-full bg-green-500/10 blur-[140px]">
+                </div>
+
+                <div
+                    class="absolute top-20 right-10 w-[180px] lg:w-[240px] h-[180px] lg:h-[240px] rounded-full bg-blue-500/10 blur-[120px]">
+                </div>
+
+                <img src="images/profile.png" alt="Christian Bustamante"
+                    class="relative z-10 h-[420px] sm:h-[520px] md:h-[620px] lg:h-[660px] object-contain transition duration-700 hover:scale-[1.02]">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="about" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+
+        <h2 class="text-3xl font-bold mb-3">
+            About Me
+        </h2>
+
+        <p class="text-zinc-400 mb-10">
+            Developer • IT Professional • Systems Builder
+        </p>
+
+        <div class="glass glass-hover rounded-3xl p-8 lg:p-10">
+
+            <h3 class="text-3xl font-bold">
+                Christian Bustamante
+            </h3>
+
+            <div class="text-blue-400 mt-2">
+                Full Stack Developer • Mobile • IT • Embedded Systems
+            </div>
+
+            <div class="grid lg:grid-cols-[1.3fr_.7fr] gap-10 mt-8">
+
+                <div>
+
+                    <p class="text-zinc-300 leading-8">
+
+                        I am a Full Stack Developer and Information Technology professional with experience designing,
+                        developing and supporting software and technology solutions that solve real operational and
+                        business challenges.
+
+                    </p>
+
+                    <p class="text-zinc-300 leading-8 mt-6">
+
+                        My background spans software engineering, mobile development, workflow automation,
+                        infrastructure, networking, business systems, embedded technologies and integrated digital
+                        solutions.
+
+                    </p>
+
+                    <p class="text-zinc-300 leading-8 mt-6">
+
+                        Throughout my career, I have delivered software platforms including lending and loan management
+                        systems, document routing and workflow solutions, inventory and order management, sales
+                        monitoring, reporting platforms, waste management solutions and customized business
+                        applications.
+
+                    </p>
+
+                    <p class="text-zinc-300 leading-8 mt-6">
+
+                        Beyond software development, I also provide Information Technology support, infrastructure
+                        administration, networking and technology integration to deliver complete end-to-end solutions.
+
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <div class="glass rounded-2xl p-5">
+                            <div class="text-2xl font-bold text-blue-400">
+                                15+
+                            </div>
+                            <div class="text-zinc-400">
+                                Years Experience
+                            </div>
+                        </div>
+
+                        <div class="glass rounded-2xl p-5">
+                            <div class="text-2xl font-bold text-blue-400">
+                                Full Stack
+                            </div>
+                            <div class="text-zinc-400">
+                                Development
+                            </div>
+                        </div>
+
+                        <div class="glass rounded-2xl p-5">
+                            <div class="text-2xl font-bold text-blue-400">
+                                Mobile
+                            </div>
+                            <div class="text-zinc-400">
+                                Java • Kotlin
+                            </div>
+                        </div>
+
+                        <div class="glass rounded-2xl p-5">
+                            <div class="text-2xl font-bold text-blue-400">
+                                IT
+                            </div>
+                            <div class="text-zinc-400">
+                                Networks • Support
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+        <h2 class="text-3xl font-bold mb-3">
+            Experience & Journey
+        </h2>
+
+        <p class="text-zinc-400 mb-10 leading-8 max-w-4xl">
+            My journey in technology started from curiosity and fascination with how
+            things work. Since childhood, I have always been interested in
+            technology—exploring, creating and understanding systems beyond simply
+            using them. That interest gradually evolved into programming, software
+            development, Information Technology and building practical solutions for
+            real-world challenges.
+        </p>
+
+        <div class="grid lg:grid-cols-[1.2fr_.8fr] gap-8 mt-8">
+
+            <div class="glass glass-hover rounded-3xl p-8">
+
+                <h3 class="text-xl font-bold mb-8">
+                    Professional Journey
+                </h3>
+
+                <div class="space-y-10">
+
+                    <div>
+
+                        <div class="font-semibold text-blue-400 text-lg">
+                            Computer Programmer / Services
+                        </div>
+
+                        <div class="text-zinc-400">
+                            Freelance • August 2010 — Present
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Started taking programming and technology projects while studying and
+                            continued growing into professional software development, building
+                            customized software, mobile applications, business systems, workflow
+                            automation and integrated technology solutions.
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Selected solutions include:
+                            <br>• CashZone — Lending & Loan Management Solution
+                            <br>• Document Routing & Workflow Platform
+                            <br>• Waste Management Platform
+                            <br>• Smart Vending & Monitoring Solutions
+                            <br>• Reporting & Operational Systems
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <div class="font-semibold text-blue-400 text-lg">
+                            Information Technology Specialist & System Developer
+                        </div>
+
+                        <div class="text-zinc-400">
+                            Provincial Budget Office • Jul 2018 — Present
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Designed and developed internal systems supporting daily operational
+                            processes involving Obligation Requests (ObR), Purchase Requests (PR),
+                            document tracking, workflow routing, reporting and consolidated data
+                            management.
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Also supported office technology operations through IT services,
+                            networking, infrastructure support, troubleshooting and technical
+                            assistance to maintain reliable day-to-day operations.
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <div class="font-semibold text-blue-400 text-lg">
+                            Information Technology Consultant & System Developer
+                        </div>
+
+                        <div class="text-zinc-400">
+                            Dabarkads Musik & Restobar • Nov 2017 — Dec 2021
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Developed inventory, order management and sales monitoring systems
+                            while supporting IT operations, maintaining network infrastructure
+                            and ensuring reliability of business technology environments.
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <div class="font-semibold text-blue-400 text-lg">
+                            Information Technology Instructor
+                        </div>
+
+                        <div class="text-zinc-400">
+                            Polytechnic Institute of Tabaco • Nov 2017 — Apr 2018
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Following graduation with a Bachelor of Science in Computer Science,
+                            I was selected to serve as an Information Technology Instructor at
+                            my alma mater for both College and Senior High School students.
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Delivered Information Technology and software-related subjects with
+                            emphasis on practical application, technical problem solving and
+                            industry-oriented learning.
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <div class="font-semibold text-blue-400 text-lg">
+                            Technical Support & Systems Assistant (Part-Time)
+                        </div>
+
+                        <div class="text-zinc-400">
+                            ECPAC Systems Corp. • During College
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Worked part-time while studying, supporting software services,
+                            deployment, troubleshooting and technology operations within a company
+                            focused on software solutions, Information Technology services and
+                            accounting consultancy.
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <div class="font-semibold text-blue-400 text-lg">
+                            Computer & Network Technician (Part-Time)
+                        </div>
+
+                        <div class="text-zinc-400">
+                            Independent Technical Services • During College
+                        </div>
+
+                        <div class="text-zinc-300 mt-4">
+                            Provided computer repair, network setup, installations, maintenance
+                            and technical support services for computer shops and individual users,
+                            strengthening practical field experience early in my journey.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="flex flex-col gap-8">
+                <div class="glass glass-hover rounded-3xl p-8">
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Training & Professional Development
+                    </h3>
+
+                    <p class="text-zinc-400 mb-8">
+                        Continuous learning across software development,
+                        cloud technologies, infrastructure, engineering
+                        and business innovation.
+                    </p>
+
+                    <div class="space-y-6">
+
+                        <div>
+
+                            <div class="font-semibold text-blue-400">
+                                Software & Cloud Technologies
+                            </div>
+
+                            <div class="text-zinc-400 mt-2">
+
+                                • Basic Coding Using Python<br>
+                                • Serverless Architecture for Enhanced Public Service Delivery<br>
+                                • Operating System Fundamentals
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="font-semibold text-blue-400">
+                                Business Innovation & Digital Transformation
+                            </div>
+
+                            <div class="text-zinc-400 mt-2">
+
+                                • Strategic Competencies for MSMEs:
+                                Innovate, Integrate, Excel<br>
+
+                                • Inventory Management & Bookkeeping<br>
+
+                                • Innovative Product Development Strategies<br>
+
+                                • Regional Standards and Testing Laboratory (RSTL)
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="font-semibold text-blue-400">
+                                Information Technology & Infrastructure
+                            </div>
+
+                            <div class="text-zinc-400 mt-2">
+
+                                • Computer System Servicing NC II (280 hrs)<br>
+                                • Computer Hardware Servicing NC II (360 hrs)
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="font-semibold text-blue-400">
+                                Technical & Engineering
+                            </div>
+
+                            <div class="text-zinc-400 mt-2">
+
+                                • Electrical Installation & Maintenance NC II (402 hrs)<br>
+                                • Technical Workshops & Technology Enablement
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="font-semibold text-blue-400">
+                                Communication & Design
+                            </div>
+
+                            <div class="text-zinc-400 mt-2">
+
+                                • Training Workshop on Infographics Using Canva
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-8 flex flex-wrap gap-4">
+
+                            <a href="#certificates"
+                                class="glass glass-hover rounded-2xl px-6 py-4 flex items-center gap-3">
+
+                                <span class="text-xl">🎓</span>
+
+                                <div>
+
+                                    <div class="font-semibold">
+                                        View Trainings & Certificates
+                                    </div>
+
+                                    <div class="text-zinc-400 text-sm">
+                                        Professional development and certifications
+                                    </div>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="glass glass-hover rounded-3xl p-8">
+
+                    <h3 class="text-xl font-bold mb-5">
+                        Education
+                    </h3>
+
+                    <div class="font-semibold">
+                        Bachelor of Science in Computer Science
+                    </div>
+
+                    <div class="text-zinc-400 mt-2">
+                        Software • Systems • Information Technology
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skills" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+
+        <h2 class="text-3xl font-bold mb-3">
+            Core Expertise
+        </h2>
+
+        <p class="text-zinc-400 mb-10">
+            Areas where I create the most value through development, technology and practical problem solving.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+
+            <article class="glass glass-hover rounded-3xl p-8">
+
+                <div class="text-5xl mb-5">
+                    💻
+                </div>
+
+                <h3 class="font-bold text-xl mb-4">
+                    Building Software
+                </h3>
+
+                <p class="text-zinc-400 leading-8">
+                    I design and develop software solutions that improve operations,
+                    automate workflows and transform ideas into usable systems.
+                </p>
+
+            </article>
+
+            <article class="glass glass-hover rounded-3xl p-8">
+
+                <div class="text-5xl mb-5">
+                    🖥️
+                </div>
+
+                <h3 class="font-bold text-xl mb-4">
+                    Solving IT Problems
+                </h3>
+
+                <p class="text-zinc-400 leading-8">
+                    From infrastructure and networking to deployment and support,
+                    I help keep technology environments reliable and efficient.
+                </p>
+
+            </article>
+
+            <article class="glass glass-hover rounded-3xl p-8">
+
+                <div class="text-5xl mb-5">
+                    📊
+                </div>
+
+                <h3 class="font-bold text-xl mb-4">
+                    Creating Business Solutions
+                </h3>
+
+                <p class="text-zinc-400 leading-8">
+                    I build systems that support reporting, monitoring,
+                    workflows and daily operational processes.
+                </p>
+
+            </article>
+
+            <article class="glass glass-hover rounded-3xl p-8">
+
+                <div class="text-5xl mb-5">
+                    ⚙️
+                </div>
+
+                <h3 class="font-bold text-xl mb-4">
+                    Connecting Software & Hardware
+                </h3>
+
+                <p class="text-zinc-400 leading-8">
+                    I work with embedded systems, automation and integrated
+                    technologies that bridge digital and physical environments.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section id="projects" data-slider-container class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+        <div class="flex items-end justify-between gap-6 mb-10">
+            <div>
+                <h2 class="text-3xl font-bold">
+                    Featured Projects
+                </h2>
+
+                <p class="text-zinc-400 mt-3 max-w-2xl">
+                    A selection of projects I designed and developed across software,
+                    mobile, Information Technology, automation and business operations—
+                    created to solve real challenges, improve workflows and deliver
+                    practical technology solutions.
+                </p>
+            </div>
+
+            <div class="hidden md:flex gap-3">
+                <button onclick="scrollSlider(this,-1)" class="glass glass-hover w-12 h-12 rounded-2xl">←</button>
+                <button onclick="scrollSlider(this,1)" class="glass glass-hover w-12 h-12 rounded-2xl">→</button>
+            </div>
+        </div>
+
+        <div data-slider class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar pb-2">
+
+            <article class="glass glass-hover rounded-[32px] shrink-0 w-[450px] snap-start overflow-hidden">
+
+                <div class="relative h-[240px] overflow-hidden">
+
+                    <img src="images/projects/waste-management.jpg" alt="Waste Management Platform"
+                        onclick="openViewer(this.src)"
+                        class="w-full h-full object-cover transition duration-700 hover:scale-105">
+
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
+                    </div>
+
+                    <span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">
+                        Mobile
+                    </span>
+
+                </div>
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Waste Management Platform
+                    </h3>
+
+                    <p class="mt-4 text-zinc-300">
+                        Native Android application for waste collection and monitoring,
+                        enabling field personnel to capture operational data, monitor
+                        collection activities and synchronize information with a
+                        centralized cloud-based management platform.
+                    </p>
+                    <div class="mt-6">
+
+                        <div class="font-semibold text-blue-400 mb-3">
+                            Highlights
+                        </div>
+
+                        <ul class="space-y-2 text-zinc-300">
+                            <li>• Native Android application developed in Kotlin</li>
+                            <li>• Offline-first operation with automatic cloud synchronization</li>
+                            <li>• Google Maps and Street View integration for location verification</li>
+                            <li>• Centralized cloud database for real-time reporting and monitoring</li>
+                            <li>• Designed for field deployment in areas with unreliable internet connectivity</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-2">
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">Kotlin</span>
+                        <span class="glass rounded-full px-4 py-2 text-sm">PHP</span>
+                        <span class="glass rounded-full px-4 py-2 text-sm">MySQL</span>
+                        <span class="glass rounded-full px-4 py-2 text-sm">QR</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="glass glass-hover rounded-[32px] shrink-0 w-[400px] snap-start overflow-hidden">
+
+                <div class="relative h-[240px] overflow-hidden">
+
+                    <img src="images/projects/vending.jpg" alt="Smart Vending System" onclick="openViewer(this.src)"
+                        class="w-full h-full object-cover transition duration-700 hover:scale-105">
+
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
+                    </div>
+
+                    <span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">
+                        IoT
+                    </span>
+
+                </div>
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Smart Vending System
+                    </h3>
+
+                    <p class="mt-4 text-zinc-300">
+                        Monitoring, telemetry and automated vending operations.
+                    </p>
+                    <ul class="text-zinc-300">
+                        <li> • Software and hardware integration </li>
+                        <li> • Centralized management </li>
+                        <li> • Supports multiple vending machines </li>
+                        <li> • Supports Login with Google </li>
+                        <li> • Flexible and customizable </li>
+                    </ul>
+                    <div class="mt-6 flex flex-wrap gap-2">
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">Micro-controllers</span>
+                        <span class="glass rounded-full px-4 py-2 text-sm">PHP</span>
+                        <span class="glass rounded-full px-4 py-2 text-sm">IoT</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="glass glass-hover rounded-[32px] shrink-0 w-[400px] snap-start overflow-hidden">
+
+                <div class="relative h-[240px] overflow-hidden">
+
+                    <img src="images/projects/budget.png" alt="Business Automation" onclick="openViewer(this.src)"
+                        class="w-full h-full object-cover transition duration-700 hover:scale-105">
+
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
+                    </div>
+
+                    <span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">
+                        Automation
+                    </span>
+
+                </div>
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Operational Systems
+                    </h3>
+
+                    <p class="mt-4 text-zinc-300">
+                        Workflow optimization and operational efficiency.
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">Dashboard</span>
+                        <span class="glass rounded-full px-4 py-2 text-sm">Reports</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+            <article class="glass glass-hover rounded-[32px] shrink-0 w-[400px] snap-start overflow-hidden">
+
+                <div class="relative h-[240px] overflow-hidden">
+
+                    <img src="images/projects/lending.png" alt="Lending Management System"
+                        onclick="openViewer(this.src)"
+                        class="w-full h-full object-cover transition duration-700 hover:scale-105">
+
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
+                    </div>
+
+                    <span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">
+                        Business System
+                    </span>
+
+                </div>
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Lending Management System
+                    </h3>
+
+                    <p class="mt-4 text-zinc-300">
+
+                        Digital lending and loan management platform designed to streamline borrower
+                        records, payment
+                        tracking, reporting and operational workflows.
+
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">
+                            PHP
+                        </span>
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">
+                            SQL
+                        </span>
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">
+                            Reporting
+                        </span>
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">
+                            Business Logic
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="glass glass-hover rounded-[32px] shrink-0 w-[400px] snap-start overflow-hidden">
+
+                <div class="relative h-[240px] overflow-hidden">
+
+                    <img src="images/projects/workflow-system.png" alt="Document Routing and Workflow System"
+                        onclick="openViewer(this.src)"
+                        class="w-full h-full object-cover transition duration-700 hover:scale-105">
+
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent">
+                    </div>
+
+                    <span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">
+                        Workflow System
+                    </span>
+
+                </div>
+
+                <div class="p-8">
+
+                    <h3 class="text-2xl font-bold">
+                        Document Routing & Workflow System
+                    </h3>
+
+                    <p class="mt-4 text-zinc-300">
+
+                        Digital workflow platform designed to manage document routing,
+                        task assignment, approval processes, tracking and operational coordination
+                        across multiple users and departments.
+
+                    </p>
+
+                    <div class="mt-6 flex flex-wrap gap-2">
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">
+                            Workflow
+                        </span>
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">
+                            Approval
+                        </span>
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">
+                            Tracking
+                        </span>
+
+                        <span class="glass rounded-full px-4 py-2 text-sm">
+                            Dashboard
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+        </div>
+
+    </section>
+
+    <section id="platforms" data-slider-container class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+        <div class="flex items-end justify-between gap-6 mb-10">
+            <div>
+                <h2 class="text-3xl font-bold">
+                    Technologies & Platforms
+                </h2>
+
+                <p class="text-zinc-400 mt-3 max-w-2xl">
+                    Some of the technologies, environments and platforms I use to design, develop, deploy and support
+                    complete software and IT solutions.
+                </p>
+            </div>
+
+            <div class="hidden md:flex gap-3">
+                <button onclick="scrollSlider(this,-1)" class="glass glass-hover w-12 h-12 rounded-2xl">←</button>
+                <button onclick="scrollSlider(this,1)" class="glass glass-hover w-12 h-12 rounded-2xl">→</button>
+            </div>
+        </div>
+
+        <div data-slider class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar pb-2">
+
+            <!-- DEVELOPMENT -->
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-sky-400 mb-2">
+                    Building Software
+                </h3>
+
+                <p class="text-zinc-500 text-sm mb-5">
+                    Creating web, mobile and business solutions from backend to deployment.
+                </p>
+
+                <div class="grid grid-cols-4 gap-5 text-center">
+
+                    <div><i class="devicon-php-plain text-4xl text-indigo-300"></i>
+                        <div class="mt-2 text-xs">PHP</div>
+                    </div>
+
+                    <div><i class="devicon-javascript-plain text-4xl text-yellow-300"></i>
+                        <div class="mt-2 text-xs">JS</div>
+                    </div>
+
+                    <div><i class="devicon-csharp-plain text-4xl text-violet-300"></i>
+                        <div class="mt-2 text-xs">C#</div>
+                    </div>
+
+                    <div><i class="devicon-dotnetcore-plain text-4xl text-purple-300"></i>
+                        <div class="mt-2 text-xs">VB.NET</div>
+                    </div>
+
+                    <div><i class="devicon-java-plain text-4xl text-orange-300"></i>
+                        <div class="mt-2 text-xs">Java</div>
+                    </div>
+
+                    <div><i class="devicon-kotlin-plain text-4xl text-violet-300"></i>
+                        <div class="mt-2 text-xs">Kotlin</div>
+                    </div>
+
+                    <div><i class="devicon-python-plain text-4xl text-blue-300"></i>
+                        <div class="mt-2 text-xs">Python</div>
+                    </div>
+
+                    <div><i class="devicon-go-original-wordmark text-4xl"></i>
+                        <div class="mt-2 text-xs">Go</div>
+                    </div>
+
+                    <div><i class="devicon-mysql-plain text-4xl text-cyan-300"></i>
+                        <div class="mt-2 text-xs">MySQL</div>
+                    </div>
+
+                    <div><i class="devicon-bootstrap-plain text-4xl text-violet-300"></i>
+                        <div class="mt-2 text-xs">Bootstrap</div>
+                    </div>
+
+                    <div>
+                        <img src="https://cdn.simpleicons.org/tailwindcss/38BDF8" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">Tailwind</div>
+                    </div>
+
+                    <div><i class="devicon-postman-plain text-4xl text-orange-300"></i>
+                        <div class="mt-2 text-xs">API</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TOOLS -->
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-violet-400 mb-2">
+                    Creating & Shipping
+                </h3>
+
+                <p class="text-zinc-500 text-sm mb-5">
+                    Tools and environments I use to turn ideas into working products.
+                </p>
+
+                <div class="grid grid-cols-4 gap-5 text-center">
+
+                    <div><i class="devicon-visualstudio-plain text-4xl text-purple-300"></i>
+                        <div class="mt-2 text-xs">VS</div>
+                    </div>
+                    <div><i class="devicon-vscode-plain text-4xl text-blue-300"></i>
+                        <div class="mt-2 text-xs">VS Code</div>
+                    </div>
+                    <div><i class="devicon-androidstudio-plain text-4xl text-green-300"></i>
+                        <div class="mt-2 text-xs">Android</div>
+                    </div>
+                    <div><i class="devicon-git-plain text-4xl text-orange-300"></i>
+                        <div class="mt-2 text-xs">Git</div>
+                    </div>
+                    <div><i class="devicon-github-original text-4xl"></i>
+                        <div class="mt-2 text-xs">GitHub</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- OS -->
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-cyan-400 mb-2">
+                    Working Across Platforms
+                </h3>
+
+                <p class="text-zinc-500 text-sm mb-5">
+                    From desktop systems to servers and self-hosted environments.
+                </p>
+
+                <div class="grid grid-cols-4 gap-5 text-center">
+
+                    <div><i class="devicon-windows8-original text-4xl text-blue-500"></i>
+                        <div class="mt-2 text-xs">Windows</div>
+                    </div>
+
+                    <div><i class="devicon-linux-plain text-4xl text-yellow-100"></i>
+                        <div class="mt-2 text-xs">Linux</div>
+                    </div>
+
+                    <div><i class="devicon-ubuntu-plain text-4xl text-orange-300"></i>
+                        <div class="mt-2 text-xs">Ubuntu</div>
+                    </div>
+
+                    <div><i class="devicon-debian-plain text-4xl text-red-300"></i>
+                        <div class="mt-2 text-xs">Debian</div>
+                    </div>
+
+                    <div><i class="devicon-centos-plain text-4xl text-purple-300"></i>
+                        <div class="mt-2 text-xs">CentOS</div>
+                    </div>
+
+                    <div><i class="devicon-android-plain text-4xl text-green-300"></i>
+                        <div class="mt-2 text-xs">Android</div>
+                    </div>
+
+                    <div><i class="devicon-ubuntu-plain text-4xl text-orange-200"></i>
+                        <div class="mt-2 text-xs">Ubuntu Server</div>
+                    </div>
+
+                    <div><i class="devicon-linux-plain text-4xl text-zinc-300"></i>
+                        <div class="mt-2 text-xs">Linux Server</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- INFRA -->
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-emerald-400 mb-2">
+                    Deploying & Managing
+                </h3>
+
+                <p class="text-zinc-500 text-sm mb-5">
+                    Infrastructure, networking and cloud services used for real deployments.
+                </p>
+
+                <div class="grid grid-cols-4 gap-5 text-center">
+
+                    <div><i class="devicon-docker-plain text-4xl text-blue-300"></i>
+                        <div class="mt-2 text-xs">Docker</div>
+                    </div>
+
+                    <div><img src="https://cdn.simpleicons.org/proxmox/F97316" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">Proxmox</div>
+                    </div>
+
+                    <div><img src="https://cdn.simpleicons.org/cloudflare/F38020" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">Cloudflare</div>
+                    </div>
+
+                    <div><img src="https://cdn.simpleicons.org/mikrotik/2D8CFF" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">MikroTik</div>
+                    </div>
+
+                    <div>
+                        <i class="devicon-oracle-original text-4xl text-red-400"></i>
+                        <div class="mt-2 text-xs">
+                            Oracle
+                        </div>
+                    </div>
+
+                    <div><img src="https://cdn.simpleicons.org/googlecloud/4285F4" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">Google</div>
+                    </div>
+
+                    <div><img src="https://cdn.simpleicons.org/adguard/68BC71" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">AdGuard</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AUTOMATION -->
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+
+                <h3 class="font-semibold text-amber-400 mb-2">
+                    Connecting Hardware & Automation
+                </h3>
+
+                <p class="text-zinc-500 text-sm mb-5">
+                    Bridging software with devices, sensors and smart environments.
+                </p>
+
+                <div class="grid grid-cols-4 gap-5 text-center">
+
+                    <div><i class="devicon-arduino-plain text-4xl text-cyan-300"></i>
+                        <div class="mt-2 text-xs">Arduino</div>
+                    </div>
+
+                    <div><img src="https://cdn.simpleicons.org/espressif/E7352C" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">ESP</div>
+                    </div>
+
+                    <div>
+                        <img src="https://cdn.simpleicons.org/raspberrypi/C51A4A" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">Raspberry Pi</div>
+                    </div>
+
+                    <div>
+                        <img src="https://cdn.simpleicons.org/linux/FCC624" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">Orange Pi</div>
+                    </div>
+
+                    <div><img src="https://cdn.simpleicons.org/homeassistant/41BDF5" class="w-10 h-10 mx-auto">
+                        <div class="mt-2 text-xs">HA</div>
+                    </div>
+
+                    <div>
+                        <img src="images/icons/tuya.svg" class="w-10 h-10 mx-auto invert dark:invert-0">
+
+                        <div class="mt-2 text-xs">
+                            Tuya
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="certificates" data-slider-container
+        class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20 overflow-hidden">
+        <div class="flex items-end justify-between gap-6 mb-10">
+            <div>
+                <h2 class="text-3xl font-bold">
+                    Training & Certifications
+                </h2>
+
+                <p class="text-zinc-400 mt-3 max-w-2xl">
+                    I continuously invest in learning and professional development
+                    to expand my capabilities across software engineering,
+                    Information Technology, infrastructure, business solutions,
+                    automation and emerging technologies.
+                </p>
+            </div>
+
+            <div class="hidden md:flex gap-3">
+                <button onclick="scrollSlider(this,-1)" class="glass glass-hover w-12 h-12 rounded-2xl">←</button>
+                <button onclick="scrollSlider(this,1)" class="glass glass-hover w-12 h-12 rounded-2xl">→</button>
+            </div>
+        </div>
+
+        <div data-slider id="certSlider"
+            class="flex gap-6 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory hide-scrollbar">
+
+            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start">
+
+                <img src="images/certificates/K-12 Seminar-Workshop Speaker.jpg"
+                    class="w-full aspect-[4/3] object-cover" alt="Python" onclick="openViewer(this.src)">
+
+                <div class="p-6">
+
+                    <div class="text-blue-400 text-sm">
+                        2018
+                    </div>
+
+                    <h3 class="font-bold mt-2">
+                        K-12 Seminar-Workshop (Speaker)
+                    </h3>
+
+                    <div class="text-zinc-400 mt-3">
+                        Polytechnic Institute of Tabaco
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start">
+
+                <img src="images/certificates/Dabarkads System.jpg" onclick="openViewer(this.src)"
+                    class="w-full aspect-[4/3] object-cover" alt="Python">
+
+                <div class="p-6">
+
+                    <div class="text-blue-400 text-sm">
+                        2015
+                    </div>
+
+                    <h3 class="font-bold mt-2">
+                        Dabarkads System Development
+                    </h3>
+
+                    <div class="text-zinc-400 mt-3">
+                        Dabarkads Musik & Restobar
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start">
+
+                <img src="images/certificates/PITA Voting System Dev.jpg" onclick="openViewer(this.src)"
+                    class="w-full aspect-[4/3] object-cover" alt="Python">
+
+                <div class="p-6">
+
+                    <div class="text-blue-400 text-sm">
+                        2015
+                    </div>
+
+                    <h3 class="font-bold mt-2">
+                        PITA Voting System Development
+                    </h3>
+
+                    <div class="text-zinc-400 mt-3">
+                        Politechnic Institute of Tabaco
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start">
+
+                <img src="images/certificates/python.jpg" onclick="openViewer(this.src)"
+                    class="w-full aspect-[4/3] object-cover" alt="Python">
+
+                <div class="p-6">
+
+                    <div class="text-blue-400 text-sm">
+                        2025
+                    </div>
+
+                    <h3 class="font-bold mt-2">
+                        Basic Coding Using Python
+                    </h3>
+
+                    <div class="text-zinc-400 mt-3">
+                        DICT Albay
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start">
+
+                <img src="images/certificates/Serverless-Architecture.jpg" onclick="openViewer(this.src)"
+                    class="w-full aspect-[4/3] object-cover" alt="Serverless">
+
+                <div class="p-6">
+
+                    <div class="text-blue-400 text-sm">
+                        2025
+                    </div>
+
+                    <h3 class="font-bold mt-2">
+                        Serverless Architecture for enhance Public Service Delivery
+                    </h3>
+
+                    <div class="text-zinc-400 mt-3">
+                        DICT Region V
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start">
+
+                <img src="images/certificates/CSS.jpg" onclick="openViewer(this.src)"
+                    class="w-full aspect-[4/3] object-cover" alt="CSS">
+
+                <div class="p-6">
+
+                    <div class="text-blue-400 text-sm">
+                        TESDA
+                    </div>
+
+                    <h3 class="font-bold mt-2">
+                        Computer System Servicing NC II
+                    </h3>
+
+                    <div class="text-zinc-400 mt-3">
+                        280 Hours
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start">
+
+                <img src="images/certificates/CHS.jpg" onclick="openViewer(this.src)"
+                    class="w-full aspect-[4/3] object-cover" alt="CHS">
+
+                <div class="p-6">
+
+                    <div class="text-blue-400 text-sm">
+                        TESDA
+                    </div>
+
+                    <h3 class="font-bold mt-2">
+                        Computer Hardware Servicing NC II
+                    </h3>
+
+                    <div class="text-zinc-400 mt-3">
+                        360 Hours
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start">
+
+                <img src="images/certificates/EIM.jpg" onclick="openViewer(this.src)"
+                    class="w-full aspect-[4/3] object-cover" alt="EIM">
+
+                <div class="p-6">
+
+                    <div class="text-blue-400 text-sm">
+                        TESDA
+                    </div>
+
+                    <h3 class="font-bold mt-2">
+                        Electrical Installation &
+                        Maintenance NC II
+                    </h3>
+
+                    <div class="text-zinc-400 mt-3">
+                        402 Hours
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="future" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+
+        <h2 class="text-3xl font-bold mb-3">
+            Looking Ahead
+        </h2>
+
+        <p class="text-zinc-400 leading-8 max-w-5xl">
+
+            Curiosity has always been the starting point of my journey in technology,
+            and it continues to shape what I explore next.
+
+        </p>
+
+        <p class="text-zinc-300 leading-8 mt-6 max-w-5xl">
+
+            Beyond building software and supporting operational systems, I am interested
+            in exploring operating systems, infrastructure, embedded computing,
+            automation and deeper system-level technologies. I enjoy understanding
+            how things work and creating solutions that connect software with real-world use.
+
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-3">
+
+            <span class="glass px-5 py-3 rounded-2xl">
+                🖥️ Operating Systems
+            </span>
+
+            <span class="glass px-5 py-3 rounded-2xl">
+                ⚙️ Embedded Systems
+            </span>
+
+            <span class="glass px-5 py-3 rounded-2xl">
+                ☁️ Infrastructure
+            </span>
+
+            <span class="glass px-5 py-3 rounded-2xl">
+                🏠 Smart Automation
+            </span>
+
+            <span class="glass px-5 py-3 rounded-2xl">
+                🚀 Platform Building
+            </span>
+
+            <span class="glass px-5 py-3 rounded-2xl">
+                🔬 Continuous Learning
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+
+        <div class="glass rounded-3xl p-8 lg:p-10">
+
+            <h2 class="text-4xl font-bold">
+                Let's Build Something
+            </h2>
+
+            <p class="mt-4 text-zinc-300 max-w-2xl">
+                Open for collaboration, software projects,
+                mobile applications, IT solutions,
+                automation and innovation.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+
+                <a href="mailto:christian.borsal.bustamante@gmail.com"
+                    class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">
+
+                    <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.5l8 5 8-5V6H4z" />
+                    </svg>
+
+                    <span>Email</span>
+
+                </a>
+
+                <a href="https://github.com/tihloh" target="_blank"
+                    class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">
+
+                    <svg class="w-5 h-5 text-zinc-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.1 1.4 3.9 1 .1-.8.5-1.4.9-1.7-2.7-.3-5.5-1.3-5.5-6A4.7 4.7 0 0 1 7 7.2a4.3 4.3 0 0 1 .1-3.1s1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2a4.3 4.3 0 0 1 .1 3.1 4.7 4.7 0 0 1 1.2 3.3c0 4.7-2.8 5.7-5.5 6 .5.4 1 1.2 1 2.5v3.7c0 .3.2.7.8.6A12 12 0 0 0 12 .5z" />
+                    </svg>
+
+                    <span>GitHub</span>
+
+                </a>
+
+                <a href="https://linkedin.com/in/christian-bustamante-b1a345252" target="_blank"
+                    class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">
+
+                    <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4.1 0 4.8 2.5 4.8 5.8V21h-4v-5.3c0-1.3 0-2.9-1.8-2.9-1.8 0-2.1 1.4-2.1 2.8V21h-4z" />
+                    </svg>
+
+                    <span>LinkedIn</span>
+
+                </a>
+
+                <a href="https://www.facebook.com/5469686C6F68" target="_blank"
+                    class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">
+
+                    <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.2-3.3 3.2-3.3.9 0 1.9.2 1.9.2v2.1h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 2.9H13v7A10 10 0 0 0 22 12z" />
+                    </svg>
+
+                    <span>Facebook</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="py-10 text-center text-sm text-zinc-500">
+
+        © 2026 Christian Bustamante
+
+    </footer>
+
+
+    <div id="imageViewer"
+        class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4">
+
+        <button onclick="closeViewer()" class="absolute top-6 right-6 glass rounded-full w-12 h-12 text-xl">
+
+            ✕
+
+        </button>
+
+        <img id="viewerImage" class="max-w-full max-h-full object-contain rounded-3xl">
+
+    </div>
+
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            scrollbar-width: none;
+        }
+    </style>
+    <script>
+
+        function scrollSlider(button, direction) {
+
+            const container =
+                button.closest("[data-slider-container]");
+
+            const slider =
+                container.querySelector("[data-slider]");
+
+            if (!slider)
+                return;
+
+            slider.scrollBy({
+
+                left:
+                    direction *
+                    (slider.clientWidth * .8),
+
+                behavior:
+                    "smooth"
+
+            });
+
+        }
+
+    </script>
+    <script>
+
+        function openViewer(src) {
+
+            const viewer =
+                document.getElementById("imageViewer");
+
+            const image =
+                document.getElementById("viewerImage");
+
+            image.src =
+                src;
+
+            viewer.classList.remove("hidden");
+
+            viewer.classList.add("flex");
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+        function closeViewer() {
+
+            const viewer =
+                document.getElementById("imageViewer");
+
+            viewer.classList.add("hidden");
+
+            viewer.classList.remove("flex");
+
+            document.body.style.overflow =
+                "auto";
+
+        }
+
+        document
+            .getElementById("imageViewer")
+            .addEventListener("click", function (e) {
+
+                if (e.target.id === "imageViewer") {
+
+                    closeViewer();
+
+                }
+
+            });
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "Escape") {
+
+                closeViewer();
+
+            }
+
+        });
+    </script>
+
+    <script>
+        const container =
+            document.getElementById(
+                "fireflies"
+            );
+
+        function spawnDigit() {
+            const el = document.createElement("div");
+            el.className = "firefly";
+            el.textContent = Math.floor(Math.random() * 10);
+            el.style.left = Math.random() * 100 + "vw";
+            el.style.top = Math.random() * 100 + "vh";
+            el.style.fontSize = (10 + Math.random() * 18) + "px";
+            const life = 3000 + Math.random() * 4000;
+            el.style.setProperty("--life", life + "ms");
+            container.appendChild(el);
+            setTimeout(() => {
+                el.remove();
+            }, life);
+        }
+
+        setInterval(() => {
+            if (container.children.length < 20) {
+                spawnDigit();
+            }
+        }, 500);
+    </script>
+
+
+</body>
+
+</html>
