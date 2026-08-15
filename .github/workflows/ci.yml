@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate portfolio
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        run: |
+          test -f index.html
+          test -f CNAME
+          test -d images
+
+      - name: Validate HTML structure
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class Validator(HTMLParser):
+              pass
+
+          html = Path('index.html').read_text(encoding='utf-8')
+          parser = Validator()
+          parser.feed(html)
+          parser.close()
+
+          required = [
+              '<title>Christian Bustamante | Portfolio</title>',
+              'id="about"',
+              'id="skills"',
+              'id="projects"',
+              'id="platforms"',
+              'id="contact"',
+          ]
+
+          missing = [item for item in required if item not in html]
+          if missing:
+              raise SystemExit('Missing required markup: ' + ', '.join(missing))
+
+          print('HTML parsed successfully and required sections are present.')
+          PY
+
+      - name: Check local asset references
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          html = Path('index.html').read_text(encoding='utf-8')
+          refs = re.findall(r'(?:src|href)=["\']([^"\']+)["\']', html)
+          missing = []
+
+          for ref in refs:
+              if ref.startswith(('http://', 'https://', '#', 'mailto:', 'tel:', 'javascript:')):
+                  continue
+              clean = ref.split('?', 1)[0].split('#', 1)[0]
+              if clean and not Path(clean).exists():
+                  missing.append(ref)
+
+          if missing:
+              raise SystemExit('Missing local assets: ' + ', '.join(sorted(set(missing))))
+
+          print('All local asset references exist.')
+          PY
