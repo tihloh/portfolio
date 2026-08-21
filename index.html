@@ -448,14 +448,14 @@
                     <div><i class="devicon-github-original text-4xl"></i>
                         <div class="mt-2 text-xs">GitHub</div>
                     </div>
-                    <div><i class="devicon-githubactions-plain text-4xl text-blue-400"></i>
-                        <div class="mt-2 text-xs">Actions</div>
+                    <div>
+                        <i class="devicon-githubactions-plain text-4xl text-blue-400"></i>
+                        <div class="mt-2 text-xs">GitHub Actions</div>
                     </div>
-                    <div><span class="text-4xl">♻️</span>
+
+                    <div>
+                        <span class="text-4xl">♻️</span>
                         <div class="mt-2 text-xs">CI/CD</div>
-                    </div>
-                    <div><i class="devicon-docker-plain text-4xl text-blue-300"></i>
-                        <div class="mt-2 text-xs">Docker</div>
                     </div>
                 </div>
             </div>
@@ -537,6 +537,30 @@
                     <div><img src="images/icons/tuya.svg" class="w-10 h-10 mx-auto invert dark:invert-0" alt="Tuya">
                         <div class="mt-2 text-xs">Tuya</div>
                     </div>
+                </div>
+            </div>
+
+            <!-- ARCHITECTURE -->
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-emerald-400 mb-2">
+                    Designing Systems
+                </h3>
+
+                <p class="text-zinc-500 text-sm mb-5">
+                    Designing maintainable, scalable and practical software architectures.
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="glass rounded-full px-4 py-2 text-sm">MVC</span>
+                    <span class="glass rounded-full px-4 py-2 text-sm">REST API</span>
+                    <span class="glass rounded-full px-4 py-2 text-sm">Client–Server</span>
+                    <span class="glass rounded-full px-4 py-2 text-sm">Layered</span>
+                    <span class="glass rounded-full px-4 py-2 text-sm">Modular</span>
+                    <span class="glass rounded-full px-4 py-2 text-sm">Service-Oriented</span>
+                    <span class="glass rounded-full px-4 py-2 text-sm">Microservices</span>
+                    <span class="glass rounded-full px-4 py-2 text-sm">Offline-First</span>
+
                 </div>
             </div>
         </div>
@@ -1055,11 +1079,16 @@
             const slider = container.querySelector('[data-slider]');
             if (!slider) return;
             slider.scrollBy({
-                left: direction * (slider.clientWidth * .8),
-                behavior: 'smooth'
+
+                left: direction *
+                    (slider.clientWidth * .8),
+
+                behavior: "smooth"
+
             });
         }
-
+    </script>
+    <script>
         function openViewer(src) {
             const viewer = document.getElementById('imageViewer');
             document.getElementById('viewerImage').src = src;
