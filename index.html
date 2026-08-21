@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,12 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background:
                 radial-gradient(circle at top right, #2563eb22, transparent 30%),
                 radial-gradient(circle at bottom left, #9333ea22, transparent 35%);
         }
+
         .glass {
             background: rgba(255, 255, 255, .05);
             backdrop-filter: blur(20px);
@@ -20,11 +25,16 @@
             border: 1px solid rgba(255, 255, 255, .08);
             box-shadow: 0 8px 40px rgba(0, 0, 0, .08);
         }
-        .glass-hover { transition: .4s; }
+
+        .glass-hover {
+            transition: .4s;
+        }
+
         .glass-hover:hover {
             transform: translateY(-6px);
             box-shadow: 0 20px 60px rgba(59, 130, 246, .18);
         }
+
         .glow {
             position: fixed;
             top: 0;
@@ -36,6 +46,7 @@
             pointer-events: none;
             z-index: -1;
         }
+
         .firefly {
             position: absolute;
             font-family: consolas, monospace;
@@ -45,27 +56,60 @@
             animation: fade var(--life) ease-in-out;
             user-select: none;
         }
-        @keyframes fade {
-            0% { opacity: 0; }
-            15% { opacity: 1; }
-            85% { opacity: 1; }
-            100% { opacity: 0; }
+
+    .section-kicker {
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .75rem;
+      font-weight: 700;
+    }
+        .chip {
+            border: 1px solid rgba(255, 255, 255, .09);
+            background: rgba(255, 255, 255, .04);
         }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { scrollbar-width: none; }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            85% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            scrollbar-width: none;
+        }
     </style>
 </head>
+
 <body class="bg-black text-white overflow-x-hidden">
     <div class="glow"></div>
     <div id="fireflies" class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]"></div>
-    <div class="fixed inset-0 pointer-events-none opacity-[0.3] z-[-2] bg-repeat bg-[length:300px]" style="background-image:url('images/bg-circuit.png')"></div>
+    <div class="fixed inset-0 pointer-events-none opacity-[0.3] z-[-2] bg-repeat bg-[length:300px]"
+        style="background-image:url('images/bg-circuit.png')"></div>
 
     <nav class="sticky top-0 z-50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-5 lg:px-6 pt-4">
             <div class="glass rounded-3xl px-6 lg:px-8 min-h-16 py-3 flex items-center justify-between">
                 <a href="#hero" class="group">
-                    <h1 class="font-bold text-lg lg:text-xl transition group-hover:text-blue-400">Christian Bustamante</h1>
-                    <div class="text-xs text-zinc-400">Software Developer • IT • Systems • Automation</div>
+                    <h1 class="font-bold text-lg lg:text-xl transition group-hover:text-blue-400">Christian Bustamante
+                    </h1>
+                    <div class="text-xs text-zinc-400">Software Development • IT Systems • Infrastructure</div>
                 </a>
                 <div class="hidden lg:flex items-center gap-7 text-sm">
                     <a href="#about" class="text-zinc-300 hover:text-blue-400 transition">About</a>
@@ -86,11 +130,13 @@
                 <p class="text-green-400 uppercase tracking-[0.25em]">Full Stack Developer • IT • Automation</p>
                 <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black mt-6 leading-[1]">
                     Building
-                    <span class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Software</span>
+                    <span
+                        class="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Software</span>
                     That Solves<br>Real Problems
                 </h1>
                 <p class="mt-8 text-base sm:text-lg lg:text-xl text-zinc-300 leading-8 max-w-2xl mx-auto lg:mx-0">
-                    Full Stack Developer and IT professional focused on solving real operational problems through software, information systems, infrastructure, automation and practical technology solutions.
+                    Full Stack Developer and IT professional focused on solving real operational problems through
+                    software, information systems, infrastructure, automation and practical technology solutions.
                 </p>
                 <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
                     <a href="#projects" class="glass glass-hover px-8 py-4 rounded-2xl">View Projects</a>
@@ -98,66 +144,190 @@
                 </div>
             </div>
             <div class="relative flex justify-center items-end min-h-[420px] lg:min-h-[720px]">
-                <div class="absolute bottom-20 w-[300px] lg:w-[420px] h-[300px] lg:h-[420px] rounded-full bg-green-500/10 blur-[140px]"></div>
-                <div class="absolute top-20 right-10 w-[180px] lg:w-[240px] h-[180px] lg:h-[240px] rounded-full bg-blue-500/10 blur-[120px]"></div>
-                <img src="images/profile.png" alt="Christian Bustamante" class="relative z-10 h-[420px] sm:h-[520px] md:h-[620px] lg:h-[660px] object-contain transition duration-700 hover:scale-[1.02]">
+                <div
+                    class="absolute bottom-20 w-[300px] lg:w-[420px] h-[300px] lg:h-[420px] rounded-full bg-green-500/10 blur-[140px]">
+                </div>
+                <div
+                    class="absolute top-20 right-10 w-[180px] lg:w-[240px] h-[180px] lg:h-[240px] rounded-full bg-blue-500/10 blur-[120px]">
+                </div>
+                <img src="images/profile.png" alt="Christian Bustamante"
+                    class="relative z-10 h-[420px] sm:h-[520px] md:h-[620px] lg:h-[660px] object-contain transition duration-700 hover:scale-[1.02]">
             </div>
         </div>
     </section>
 
     <section id="about" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
-        <h2 class="text-3xl font-bold mb-3">About Me</h2>
-        <p class="text-zinc-400 mb-10">Developer • IT Professional • Systems Builder</p>
+      <div class="mb-9">
+        <div class="section-kicker">Profile</div>
+        <h2 class="text-3xl lg:text-4xl font-bold mt-2">Software developer with an end-to-end IT perspective</h2>
+      </div>
         <div class="glass glass-hover rounded-3xl p-8 lg:p-10">
             <h3 class="text-3xl font-bold">Christian Bustamante</h3>
             <div class="text-blue-400 mt-2">Full Stack Developer • Mobile • IT • Embedded Systems</div>
             <div class="grid lg:grid-cols-[1.3fr_.7fr] gap-10 mt-8">
                 <div>
-                    <p class="text-zinc-300 leading-8">I am a Full Stack Developer and Information Technology professional with experience designing, developing, deploying and supporting software and technology solutions that solve real operational and business challenges.</p>
-                    <p class="text-zinc-300 leading-8 mt-6">My background spans software engineering, web and mobile development, workflow automation, databases, infrastructure, networking, business systems, embedded technologies and integrated digital solutions.</p>
-                    <p class="text-zinc-300 leading-8 mt-6">I have delivered systems for government processes, document routing, lending, inventory, order and sales management, reporting, waste-management field operations and smart vending/monitoring.</p>
-                    <p class="text-zinc-300 leading-8 mt-6">I believe the main job of IT and software development is to understand a real problem and use the right technology to solve it reliably.</p>
+                    <p class="text-zinc-300 leading-8">I am a Full Stack Developer and Information Technology
+                        professional with experience designing, developing, deploying and supporting software and
+                        technology solutions that solve real operational and business challenges.</p>
+                    <p class="text-zinc-300 leading-8 mt-6">My background spans software engineering, web and mobile
+                        development, workflow automation, databases, infrastructure, networking, business systems,
+                        embedded technologies and integrated digital solutions.</p>
+                    <p class="text-zinc-300 leading-8 mt-6">I have delivered systems for government processes, document
+                        routing, lending, inventory, order and sales management, reporting, waste-management field
+                        operations and smart vending/monitoring.</p>
+                    <p class="text-zinc-300 leading-8 mt-6">I believe the main job of IT and software development is to
+                        understand a real problem and use the right technology to solve it reliably.</p>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="glass rounded-2xl p-5"><div class="text-2xl font-bold text-blue-400">15+</div><div class="text-zinc-400">Years Building Solutions</div></div>
-                    <div class="glass rounded-2xl p-5"><div class="text-2xl font-bold text-blue-400">Full Stack</div><div class="text-zinc-400">Development</div></div>
-                    <div class="glass rounded-2xl p-5"><div class="text-2xl font-bold text-blue-400">Gov IT</div><div class="text-zinc-400">Systems • Workflow</div></div>
-                    <div class="glass rounded-2xl p-5"><div class="text-2xl font-bold text-blue-400">IT</div><div class="text-zinc-400">Networks • Servers • Support</div></div>
+                    <div class="glass rounded-2xl p-5">
+                        <div class="text-2xl font-bold text-blue-400">15+</div>
+                        <div class="text-zinc-400">Years Building Solutions</div>
+                    </div>
+                    <div class="glass rounded-2xl p-5">
+                        <div class="text-2xl font-bold text-blue-400">Full Stack</div>
+                        <div class="text-zinc-400">Development</div>
+                    </div>
+                    <div class="glass rounded-2xl p-5">
+                        <div class="text-2xl font-bold text-blue-400">Gov IT</div>
+                        <div class="text-zinc-400">Systems • Workflow</div>
+                    </div>
+                    <div class="glass rounded-2xl p-5">
+                        <div class="text-2xl font-bold text-blue-400">IT</div>
+                        <div class="text-zinc-400">Networks • Servers • Support</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="credentials" class="max-w-7xl mx-auto px-5 lg:px-6 py-14">
+        <div class="mb-9">
+            <div class="section-kicker">Professional Credentials</div>
+            <h2 class="text-3xl lg:text-4xl font-bold mt-2">Qualified on paper. Proven in practice.</h2>
+            <p class="text-zinc-400 mt-3 max-w-3xl">
+                Formal education, civil service eligibility, technical qualifications and professional development
+                supporting
+                software and IT roles.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+            <article class="glass glass-hover rounded-3xl p-6">
+                <div class="text-blue-400 font-semibold">Education</div>
+                <h3 class="text-xl font-bold mt-2">Bachelor of Science in Computer Science</h3>
+                <p class="text-zinc-400 mt-3">Foundation in software development, algorithms, databases and information
+                    systems.</p>
+            </article>
+
+            <article class="glass glass-hover rounded-3xl p-6">
+                <div class="text-green-400 font-semibold">Eligibility</div>
+                <h3 class="text-xl font-bold mt-2">Career Service Professional</h3>
+                <p class="text-zinc-400 mt-3">Civil Service Professional / second-level eligibility.</p>
+            </article>
+
+            <article class="glass glass-hover rounded-3xl p-6">
+                <div class="text-cyan-400 font-semibold">TESDA Qualifications</div>
+                <h3 class="text-xl font-bold mt-2">Technical NC II</h3>
+                <p class="text-zinc-400 mt-3">Computer Systems Servicing, Computer Hardware Servicing and Electrical
+                    Installation & Maintenance.</p>
+            </article>
+
+            <article class="glass glass-hover rounded-3xl p-6">
+                <div class="text-violet-400 font-semibold">Professional Development</div>
+                <h3 class="text-xl font-bold mt-2">DICT • Cisco • DOST</h3>
+                <p class="text-zinc-400 mt-3">Training in Python, operating systems, public-service architecture, ICT
+                    database management and digital transformation.</p>
+            </article>
+        </div>
+    </section>
+
     <section id="experience" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
-        <h2 class="text-3xl font-bold mb-3">Experience & Journey</h2>
-        <p class="text-zinc-400 mb-10 leading-8 max-w-4xl">My journey in technology started from curiosity and evolved into programming, software development, IT operations and building practical systems for real-world problems.</p>
+      <div class="mb-9">
+        <div class="section-kicker">Experience</div>
+        <h2 class="text-3xl lg:text-4xl font-bold mt-2">Professional journey</h2>
+      </div>
         <div class="grid lg:grid-cols-[1.2fr_.8fr] gap-8 mt-8">
-            <div class="glass glass-hover rounded-3xl p-8">
-                <h3 class="text-xl font-bold mb-8">Professional Journey</h3>
-                <div class="space-y-10">
-                    <div><div class="font-semibold text-blue-400 text-lg">Computer Programmer / Services</div><div class="text-zinc-400">Freelance • August 2010 — Present</div><div class="text-zinc-300 mt-4">Customized web, desktop and mobile applications, business systems, database-backed solutions, workflow automation and integrated software/hardware projects.</div></div>
-                    <div><div class="font-semibold text-blue-400 text-lg">Provincial Budget Office — IT & Systems Functions</div><div class="text-zinc-400">Provincial Government of Albay • Jul 2018 — Present</div><div class="text-zinc-300 mt-4">Actual responsibilities include information-system development and enhancement, database administration, backup and recovery, workstation/printer/network support, system maintenance, operational reporting and support for computerized budget processes.</div></div>
-                    <div><div class="font-semibold text-blue-400 text-lg">Computer Programmer & System Technician</div><div class="text-zinc-400">Dabarkads Musik & Restobar • From Nov 2016</div><div class="text-zinc-300 mt-4">Developed and supported inventory, order and sales systems while maintaining computer, network and technology operations.</div></div>
-                    <div><div class="font-semibold text-blue-400 text-lg">Information Technology Instructor</div><div class="text-zinc-400">Polytechnic Institute of Tabaco • Nov 2017 — Apr 2018</div><div class="text-zinc-300 mt-4">Taught IT and software-related subjects to College and Senior High School students with emphasis on practical application and technical problem solving.</div></div>
-                    <div><div class="font-semibold text-blue-400 text-lg">Technical Support & Systems Assistant (Part-Time)</div><div class="text-zinc-400">ECPAC Systems Corp. • During College</div><div class="text-zinc-300 mt-4">Supported software services, deployment, troubleshooting and technology operations.</div></div>
-                </div>
-            </div>
+        <div class="glass glass-hover rounded-[32px] p-7 lg:p-9">
+          <div class="space-y-10">
+            <article>
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-xl font-bold text-blue-400">Provincial Budget Office — IT & Systems Functions</h3>
+                <span class="text-sm text-zinc-500">Jul 2018 — Present</span>
+              </div>
+              <div class="text-zinc-400 mt-1">Provincial Government of Albay</div>
+              <div class="grid sm:grid-cols-2 gap-3 mt-5 text-sm text-zinc-300">
+                <div class="chip rounded-xl p-3">Information-system development, enhancement & maintenance</div>
+                <div class="chip rounded-xl p-3">Database administration, backup, maintenance & recovery</div>
+                <div class="chip rounded-xl p-3">Workstation, printer, system & network technical support</div>
+                <div class="chip rounded-xl p-3">Operational reporting, workflow and computerized budget processes</div>
+              </div>
+              <p class="text-zinc-400 mt-5">
+                Functional IT responsibilities are reflected in official performance outputs, allowing my government
+                experience to combine office-process knowledge with hands-on systems and infrastructure work.
+              </p>
+            </article>
+
+            <article>
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-xl font-bold text-blue-400">Computer Programmer / Technology Services</h3>
+                <span class="text-sm text-zinc-500">Aug 2010 — Present</span>
+              </div>
+              <div class="text-zinc-400 mt-1">Freelance</div>
+              <p class="text-zinc-300 mt-4">
+                Development of customized web, desktop and mobile applications, business systems, database-backed
+                solutions, workflow automation and integrated software/hardware projects.
+              </p>
+            </article>
+
+            <article>
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-xl font-bold text-blue-400">Computer Programmer & System Technician</h3>
+                <span class="text-sm text-zinc-500">From Nov 2016</span>
+              </div>
+              <div class="text-zinc-400 mt-1">Dabarkads Musik & Restobar</div>
+              <p class="text-zinc-300 mt-4">
+                Developed and supported inventory, order and sales systems while maintaining computer and technology
+                operations. Employment is supported by a Certificate of Employment issued in 2018.
+              </p>
+            </article>
+
+            <article>
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-xl font-bold text-blue-400">Information Technology Instructor</h3>
+                <span class="text-sm text-zinc-500">Nov 2017 — Apr 2018</span>
+              </div>
+              <div class="text-zinc-400 mt-1">Polytechnic Institute of Tabaco</div>
+              <p class="text-zinc-300 mt-4">
+                Taught IT and software-related subjects to college and senior high school students with emphasis on
+                practical application, technical problem-solving and industry-oriented learning.
+              </p>
+            </article>
+          </div>
+        </div>
             <div class="flex flex-col gap-8">
-                <div class="glass glass-hover rounded-3xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Professional Credentials</h3>
-                    <div class="space-y-5 text-zinc-300">
-                        <div><div class="font-semibold text-blue-400">Education</div><div class="text-zinc-400 mt-1">Bachelor of Science in Computer Science</div></div>
-                        <div><div class="font-semibold text-blue-400">Civil Service Eligibility</div><div class="text-zinc-400 mt-1">Career Service Professional / Second Level</div></div>
-                        <div><div class="font-semibold text-blue-400">TESDA Qualifications</div><div class="text-zinc-400 mt-1">Computer Systems Servicing NC II • Computer Hardware Servicing NC II • Electrical Installation & Maintenance NC II</div></div>
+                <div class="glass glass-hover rounded-[32px] p-7">
+                    <h3 class="text-xl font-bold">Government IT value</h3>
+                    <p class="text-zinc-400 mt-4 leading-7">
+                        I understand both the technical layer and the office process behind a system — users, documents,
+                        approvals, reporting, accountability and day-to-day operational constraints.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2 text-sm">
+                        <span class="chip rounded-full px-3 py-2">Process Analysis</span>
+                        <span class="chip rounded-full px-3 py-2">Workflow Design</span>
+                        <span class="chip rounded-full px-3 py-2">Systems Development</span>
+                        <span class="chip rounded-full px-3 py-2">User Support</span>
+                        <span class="chip rounded-full px-3 py-2">Deployment</span>
+                        <span class="chip rounded-full px-3 py-2">Maintenance</span>
                     </div>
                 </div>
-                <div class="glass glass-hover rounded-3xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Training & Professional Development</h3>
-                    <div class="space-y-5 text-zinc-300">
-                        <div><div class="font-semibold text-blue-400">Software & IT</div><div class="text-zinc-400 mt-1">• Basic Coding Using Python — 32 hours, DICT<br>• Python Essentials 1 — Cisco Networking Academy<br>• Operating Systems Basics — Cisco Networking Academy / DICT-ITU<br>• Serverless Architecture for Enhanced Public Service Delivery — DICT<br>• Basic ICT Database Management for MSMEs — DOST</div></div>
-                        <div><div class="font-semibold text-blue-400">Professional Engagement</div><div class="text-zinc-400 mt-1">• K to 12 Power Teaching Seminar-Workshop — Speaker</div></div>
-                    </div>
-                    <a href="#certificates" class="glass glass-hover rounded-2xl px-6 py-4 inline-flex mt-7">View Trainings & Certificates</a>
+
+                <div class="glass glass-hover rounded-[32px] p-7">
+                    <h3 class="text-xl font-bold">Speaking & knowledge sharing</h3>
+                    <p class="text-zinc-400 mt-4 leading-7">
+                        Served as a speaker during the K to 12 Power Teaching Seminar-Workshop of the Polytechnic
+                        Institute of
+                        Tabaco, demonstrating professional engagement beyond day-to-day technical work.
+                    </p>
                 </div>
             </div>
         </div>
@@ -165,71 +335,769 @@
 
     <section id="skills" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
         <h2 class="text-3xl font-bold mb-3">Core Expertise</h2>
-        <p class="text-zinc-400 mb-10">Areas where I create value through development, technology and practical problem solving.</p>
+        <p class="text-zinc-400 mb-10">Areas where I create value through development, technology and practical problem
+            solving.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-            <article class="glass glass-hover rounded-3xl p-8"><div class="text-5xl mb-5">💻</div><h3 class="font-bold text-xl mb-4">Building Software</h3><p class="text-zinc-400 leading-8">Designing and developing software that improves operations, automates workflows and turns real requirements into usable systems.</p></article>
-            <article class="glass glass-hover rounded-3xl p-8"><div class="text-5xl mb-5">🖥️</div><h3 class="font-bold text-xl mb-4">Solving IT Problems</h3><p class="text-zinc-400 leading-8">Infrastructure, networking, deployment, troubleshooting and support to keep technology environments reliable.</p></article>
-            <article class="glass glass-hover rounded-3xl p-8"><div class="text-5xl mb-5">📊</div><h3 class="font-bold text-xl mb-4">Creating Business & Government Solutions</h3><p class="text-zinc-400 leading-8">Systems for reporting, monitoring, document routing, approvals and daily operational processes.</p></article>
-            <article class="glass glass-hover rounded-3xl p-8"><div class="text-5xl mb-5">⚙️</div><h3 class="font-bold text-xl mb-4">Connecting Software & Hardware</h3><p class="text-zinc-400 leading-8">Embedded systems, automation and integrated technologies that bridge digital and physical environments.</p></article>
-        </div>
-    </section>
-
-    <section id="projects" data-slider-container class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
-        <div class="flex items-end justify-between gap-6 mb-10"><div><h2 class="text-3xl font-bold">Featured Projects</h2><p class="text-zinc-400 mt-3 max-w-2xl">Selected projects built to solve real operational problems across government, business, mobile and automation.</p></div><div class="hidden md:flex gap-3"><button onclick="scrollSlider(this,-1)" class="glass glass-hover w-12 h-12 rounded-2xl">←</button><button onclick="scrollSlider(this,1)" class="glass glass-hover w-12 h-12 rounded-2xl">→</button></div></div>
-        <div data-slider class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar pb-2">
-            <article class="glass glass-hover rounded-[32px] shrink-0 w-[450px] snap-start overflow-hidden"><div class="relative h-[240px] overflow-hidden"><img src="images/projects/waste-management.jpg" alt="Waste Management Platform" onclick="openViewer(this.src)" class="w-full h-full object-cover transition duration-700 hover:scale-105"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">Mobile</span></div><div class="p-8"><h3 class="text-2xl font-bold">Waste Management Platform</h3><p class="mt-4 text-zinc-300">Native Android field platform with offline operation, synchronization, mapping and centralized reporting.</p><div class="mt-6 flex flex-wrap gap-2"><span class="glass rounded-full px-4 py-2 text-sm">Kotlin</span><span class="glass rounded-full px-4 py-2 text-sm">PHP</span><span class="glass rounded-full px-4 py-2 text-sm">MySQL</span></div></div></article>
-            <article class="glass glass-hover rounded-[32px] shrink-0 w-[400px] snap-start overflow-hidden"><div class="relative h-[240px] overflow-hidden"><img src="images/projects/vending.jpg" alt="Smart Vending System" onclick="openViewer(this.src)" class="w-full h-full object-cover transition duration-700 hover:scale-105"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">IoT</span></div><div class="p-8"><h3 class="text-2xl font-bold">Smart Vending & Monitoring</h3><p class="mt-4 text-zinc-300">Software and hardware integration for payment mechanisms, remote monitoring, telemetry and automated operations.</p></div></article>
-            <article class="glass glass-hover rounded-[32px] shrink-0 w-[400px] snap-start overflow-hidden"><div class="relative h-[240px] overflow-hidden"><img src="images/projects/budget.png" alt="Budget Information System" onclick="openViewer(this.src)" class="w-full h-full object-cover transition duration-700 hover:scale-105"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">Government System</span></div><div class="p-8"><h3 class="text-2xl font-bold">Budget & Operational Information Systems</h3><p class="mt-4 text-zinc-300">Systems supporting obligation processing, reporting, document tracking, data consolidation and office workflows.</p></div></article>
-            <article class="glass glass-hover rounded-[32px] shrink-0 w-[400px] snap-start overflow-hidden"><div class="relative h-[240px] overflow-hidden"><img src="images/projects/lending.png" alt="Lending Management System" onclick="openViewer(this.src)" class="w-full h-full object-cover transition duration-700 hover:scale-105"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">Business System</span></div><div class="p-8"><h3 class="text-2xl font-bold">CashZone — Lending & Loan Management</h3><p class="mt-4 text-zinc-300">Borrower records, transactions, payment monitoring, reporting and operational workflow.</p></div></article>
-            <article class="glass glass-hover rounded-[32px] shrink-0 w-[400px] snap-start overflow-hidden"><div class="relative h-[240px] overflow-hidden"><img src="images/projects/workflow-system.png" alt="Document Routing and Workflow System" onclick="openViewer(this.src)" class="w-full h-full object-cover transition duration-700 hover:scale-105"><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div><span class="absolute bottom-5 left-5 text-xs px-3 py-2 rounded-full glass">Workflow System</span></div><div class="p-8"><h3 class="text-2xl font-bold">Document Routing & Workflow System</h3><p class="mt-4 text-zinc-300">Configurable multi-office routing, tracking, approvals, returns, permissions and history for physical-document workflows.</p><div class="mt-6 flex flex-wrap gap-2"><span class="glass rounded-full px-4 py-2 text-sm">PHP</span><span class="glass rounded-full px-4 py-2 text-sm">MariaDB</span><span class="glass rounded-full px-4 py-2 text-sm">Docker</span><span class="glass rounded-full px-4 py-2 text-sm">Nginx</span></div></div></article>
+            <article class="glass glass-hover rounded-3xl p-8">
+                <div class="text-5xl mb-5">💻</div>
+                <h3 class="font-bold text-xl mb-4">Building Software</h3>
+                <p class="text-zinc-400 leading-8">Designing and developing software that improves operations, automates
+                    workflows and turns real requirements into usable systems.</p>
+            </article>
+            <article class="glass glass-hover rounded-3xl p-8">
+                <div class="text-5xl mb-5">🖥️</div>
+                <h3 class="font-bold text-xl mb-4">Solving IT Problems</h3>
+                <p class="text-zinc-400 leading-8">Infrastructure, networking, deployment, troubleshooting and support
+                    to keep technology environments reliable.</p>
+            </article>
+            <article class="glass glass-hover rounded-3xl p-8">
+                <div class="text-5xl mb-5">📊</div>
+                <h3 class="font-bold text-xl mb-4">Creating Business & Government Solutions</h3>
+                <p class="text-zinc-400 leading-8">Systems for reporting, monitoring, document routing, approvals and
+                    daily operational processes.</p>
+            </article>
+            <article class="glass glass-hover rounded-3xl p-8">
+                <div class="text-5xl mb-5">⚙️</div>
+                <h3 class="font-bold text-xl mb-4">Connecting Software & Hardware</h3>
+                <p class="text-zinc-400 leading-8">Embedded systems, automation and integrated technologies that bridge
+                    digital and physical environments.</p>
+            </article>
         </div>
     </section>
 
     <section id="platforms" data-slider-container class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
-        <div class="flex items-end justify-between gap-6 mb-10"><div><h2 class="text-3xl font-bold">Technologies & Platforms</h2><p class="text-zinc-400 mt-3 max-w-2xl">Languages, frameworks, tools, environments and platforms I use to design, build, deploy and support complete solutions.</p></div><div class="hidden md:flex gap-3"><button onclick="scrollSlider(this,-1)" class="glass glass-hover w-12 h-12 rounded-2xl">←</button><button onclick="scrollSlider(this,1)" class="glass glass-hover w-12 h-12 rounded-2xl">→</button></div></div>
+        <div class="flex items-end justify-between gap-6 mb-10">
+            <div>
+                <h2 class="text-3xl font-bold">Technologies & Platforms</h2>
+                <p class="text-zinc-400 mt-3 max-w-2xl">Languages, frameworks, tools, environments and platforms I use
+                    to design, build, deploy and support complete solutions.</p>
+            </div>
+            <div class="hidden md:flex gap-3"><button onclick="scrollSlider(this,-1)"
+                    class="glass glass-hover w-12 h-12 rounded-2xl">←</button><button onclick="scrollSlider(this,1)"
+                    class="glass glass-hover w-12 h-12 rounded-2xl">→</button></div>
+        </div>
         <div data-slider class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar pb-2">
-            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[360px] snap-start"><h3 class="font-semibold text-sky-400 mb-2">Building Software</h3><p class="text-zinc-500 text-sm mb-5">Languages, frameworks and web technologies.</p><div class="grid grid-cols-4 gap-5 text-center">
-                <div><i class="devicon-php-plain text-4xl text-indigo-300"></i><div class="mt-2 text-xs">PHP</div></div><div><i class="devicon-javascript-plain text-4xl text-yellow-300"></i><div class="mt-2 text-xs">JS</div></div><div><i class="devicon-csharp-plain text-4xl text-violet-300"></i><div class="mt-2 text-xs">C#</div></div><div><i class="devicon-dotnetcore-plain text-4xl text-purple-300"></i><div class="mt-2 text-xs">VB.NET</div></div><div><i class="devicon-java-plain text-4xl text-orange-300"></i><div class="mt-2 text-xs">Java</div></div><div><i class="devicon-kotlin-plain text-4xl text-violet-300"></i><div class="mt-2 text-xs">Kotlin</div></div><div><i class="devicon-python-plain text-4xl text-blue-300"></i><div class="mt-2 text-xs">Python</div></div><div><i class="devicon-go-original-wordmark text-4xl"></i><div class="mt-2 text-xs">Go</div></div><div><i class="devicon-mysql-plain text-4xl text-cyan-300"></i><div class="mt-2 text-xs">MySQL</div></div><div><i class="devicon-bootstrap-plain text-4xl text-violet-300"></i><div class="mt-2 text-xs">Bootstrap</div></div><div><i class="devicon-laravel-original text-4xl text-red-400"></i><div class="mt-2 text-xs">Laravel</div></div><div><i class="devicon-jquery-plain text-4xl text-blue-300"></i><div class="mt-2 text-xs">jQuery</div></div><div><i class="devicon-composer-line text-4xl"></i><div class="mt-2 text-xs">Composer</div></div><div><img src="https://cdn.simpleicons.org/tailwindcss/38BDF8" class="w-10 h-10 mx-auto" alt="Tailwind"><div class="mt-2 text-xs">Tailwind</div></div><div><i class="devicon-postman-plain text-4xl text-orange-300"></i><div class="mt-2 text-xs">REST API</div></div>
-            </div></div>
-            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start"><h3 class="font-semibold text-violet-400 mb-2">Creating & Shipping</h3><p class="text-zinc-500 text-sm mb-5">Development and delivery tools.</p><div class="grid grid-cols-4 gap-5 text-center"><div><i class="devicon-visualstudio-plain text-4xl text-purple-300"></i><div class="mt-2 text-xs">VS</div></div><div><i class="devicon-vscode-plain text-4xl text-blue-300"></i><div class="mt-2 text-xs">VS Code</div></div><div><i class="devicon-androidstudio-plain text-4xl text-green-300"></i><div class="mt-2 text-xs">Android Studio</div></div><div><i class="devicon-git-plain text-4xl text-orange-300"></i><div class="mt-2 text-xs">Git</div></div><div><i class="devicon-github-original text-4xl"></i><div class="mt-2 text-xs">GitHub</div></div><div><i class="devicon-githubactions-plain text-4xl text-blue-400"></i><div class="mt-2 text-xs">Actions</div></div><div><span class="text-4xl">♻️</span><div class="mt-2 text-xs">CI/CD</div></div><div><i class="devicon-docker-plain text-4xl text-blue-300"></i><div class="mt-2 text-xs">Docker</div></div></div></div>
-            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start"><h3 class="font-semibold text-cyan-400 mb-2">Working Across Platforms</h3><p class="text-zinc-500 text-sm mb-5">Desktop, mobile and server environments.</p><div class="grid grid-cols-4 gap-5 text-center"><div><i class="devicon-windows8-original text-4xl text-blue-500"></i><div class="mt-2 text-xs">Windows</div></div><div><i class="devicon-linux-plain text-4xl text-yellow-100"></i><div class="mt-2 text-xs">Linux</div></div><div><i class="devicon-ubuntu-plain text-4xl text-orange-300"></i><div class="mt-2 text-xs">Ubuntu</div></div><div><i class="devicon-debian-plain text-4xl text-red-300"></i><div class="mt-2 text-xs">Debian</div></div><div><i class="devicon-centos-plain text-4xl text-purple-300"></i><div class="mt-2 text-xs">CentOS</div></div><div><i class="devicon-android-plain text-4xl text-green-300"></i><div class="mt-2 text-xs">Android</div></div></div></div>
-            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start"><h3 class="font-semibold text-emerald-400 mb-2">Deploying & Managing</h3><p class="text-zinc-500 text-sm mb-5">Infrastructure, networking and cloud services.</p><div class="grid grid-cols-4 gap-5 text-center"><div><i class="devicon-docker-plain text-4xl text-blue-300"></i><div class="mt-2 text-xs">Docker</div></div><div><img src="https://cdn.simpleicons.org/proxmox/F97316" class="w-10 h-10 mx-auto" alt="Proxmox"><div class="mt-2 text-xs">Proxmox</div></div><div><img src="https://cdn.simpleicons.org/cloudflare/F38020" class="w-10 h-10 mx-auto" alt="Cloudflare"><div class="mt-2 text-xs">Cloudflare</div></div><div><img src="https://cdn.simpleicons.org/mikrotik/2D8CFF" class="w-10 h-10 mx-auto" alt="MikroTik"><div class="mt-2 text-xs">MikroTik</div></div><div><i class="devicon-nginx-original text-4xl text-green-400"></i><div class="mt-2 text-xs">Nginx</div></div><div><i class="devicon-apache-plain text-4xl text-red-300"></i><div class="mt-2 text-xs">Apache</div></div><div><i class="devicon-oracle-original text-4xl text-red-400"></i><div class="mt-2 text-xs">Oracle</div></div><div><img src="https://cdn.simpleicons.org/googlecloud/4285F4" class="w-10 h-10 mx-auto" alt="Google Cloud"><div class="mt-2 text-xs">Google</div></div></div></div>
-            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start"><h3 class="font-semibold text-amber-400 mb-2">Connecting Hardware & Automation</h3><p class="text-zinc-500 text-sm mb-5">Software, devices, sensors and smart environments.</p><div class="grid grid-cols-4 gap-5 text-center"><div><i class="devicon-arduino-plain text-4xl text-cyan-300"></i><div class="mt-2 text-xs">Arduino</div></div><div><img src="https://cdn.simpleicons.org/espressif/E7352C" class="w-10 h-10 mx-auto" alt="ESP"><div class="mt-2 text-xs">ESP</div></div><div><img src="https://cdn.simpleicons.org/raspberrypi/C51A4A" class="w-10 h-10 mx-auto" alt="Raspberry Pi"><div class="mt-2 text-xs">Raspberry Pi</div></div><div><img src="https://cdn.simpleicons.org/homeassistant/41BDF5" class="w-10 h-10 mx-auto" alt="Home Assistant"><div class="mt-2 text-xs">HA</div></div><div><img src="images/icons/tuya.svg" class="w-10 h-10 mx-auto invert dark:invert-0" alt="Tuya"><div class="mt-2 text-xs">Tuya</div></div></div></div>
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[360px] snap-start">
+                <h3 class="font-semibold text-sky-400 mb-2">Building Software</h3>
+                <p class="text-zinc-500 text-sm mb-5">Languages, frameworks and web technologies.</p>
+                <div class="grid grid-cols-4 gap-5 text-center">
+                    <div><i class="devicon-php-plain text-4xl text-indigo-300"></i>
+                        <div class="mt-2 text-xs">PHP</div>
+                    </div>
+                    <div><i class="devicon-javascript-plain text-4xl text-yellow-300"></i>
+                        <div class="mt-2 text-xs">JS</div>
+                    </div>
+                    <div><i class="devicon-csharp-plain text-4xl text-violet-300"></i>
+                        <div class="mt-2 text-xs">C#</div>
+                    </div>
+                    <div><i class="devicon-dotnetcore-plain text-4xl text-purple-300"></i>
+                        <div class="mt-2 text-xs">VB.NET</div>
+                    </div>
+                    <div><i class="devicon-java-plain text-4xl text-orange-300"></i>
+                        <div class="mt-2 text-xs">Java</div>
+                    </div>
+                    <div><i class="devicon-kotlin-plain text-4xl text-violet-300"></i>
+                        <div class="mt-2 text-xs">Kotlin</div>
+                    </div>
+                    <div><i class="devicon-python-plain text-4xl text-blue-300"></i>
+                        <div class="mt-2 text-xs">Python</div>
+                    </div>
+                    <div><i class="devicon-go-original-wordmark text-4xl"></i>
+                        <div class="mt-2 text-xs">Go</div>
+                    </div>
+                    <div><i class="devicon-mysql-plain text-4xl text-cyan-300"></i>
+                        <div class="mt-2 text-xs">MySQL</div>
+                    </div>
+                    <div><i class="devicon-bootstrap-plain text-4xl text-violet-300"></i>
+                        <div class="mt-2 text-xs">Bootstrap</div>
+                    </div>
+                    <div><i class="devicon-laravel-original text-4xl text-red-400"></i>
+                        <div class="mt-2 text-xs">Laravel</div>
+                    </div>
+                    <div><i class="devicon-jquery-plain text-4xl text-blue-300"></i>
+                        <div class="mt-2 text-xs">jQuery</div>
+                    </div>
+                    <div><i class="devicon-composer-line text-4xl"></i>
+                        <div class="mt-2 text-xs">Composer</div>
+                    </div>
+                    <div><img src="https://cdn.simpleicons.org/tailwindcss/38BDF8" class="w-10 h-10 mx-auto"
+                            alt="Tailwind">
+                        <div class="mt-2 text-xs">Tailwind</div>
+                    </div>
+                    <div><i class="devicon-postman-plain text-4xl text-orange-300"></i>
+                        <div class="mt-2 text-xs">REST API</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-violet-400 mb-2">Creating & Shipping</h3>
+                <p class="text-zinc-500 text-sm mb-5">Development and delivery tools.</p>
+                <div class="grid grid-cols-4 gap-5 text-center">
+                    <div><i class="devicon-visualstudio-plain text-4xl text-purple-300"></i>
+                        <div class="mt-2 text-xs">VS</div>
+                    </div>
+                    <div><i class="devicon-vscode-plain text-4xl text-blue-300"></i>
+                        <div class="mt-2 text-xs">VS Code</div>
+                    </div>
+                    <div><i class="devicon-androidstudio-plain text-4xl text-green-300"></i>
+                        <div class="mt-2 text-xs">Android Studio</div>
+                    </div>
+                    <div><i class="devicon-git-plain text-4xl text-orange-300"></i>
+                        <div class="mt-2 text-xs">Git</div>
+                    </div>
+                    <div><i class="devicon-github-original text-4xl"></i>
+                        <div class="mt-2 text-xs">GitHub</div>
+                    </div>
+                    <div><i class="devicon-githubactions-plain text-4xl text-blue-400"></i>
+                        <div class="mt-2 text-xs">Actions</div>
+                    </div>
+                    <div><span class="text-4xl">♻️</span>
+                        <div class="mt-2 text-xs">CI/CD</div>
+                    </div>
+                    <div><i class="devicon-docker-plain text-4xl text-blue-300"></i>
+                        <div class="mt-2 text-xs">Docker</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-cyan-400 mb-2">Working Across Platforms</h3>
+                <p class="text-zinc-500 text-sm mb-5">Desktop, mobile and server environments.</p>
+                <div class="grid grid-cols-4 gap-5 text-center">
+                    <div><i class="devicon-windows8-original text-4xl text-blue-500"></i>
+                        <div class="mt-2 text-xs">Windows</div>
+                    </div>
+                    <div><i class="devicon-linux-plain text-4xl text-yellow-100"></i>
+                        <div class="mt-2 text-xs">Linux</div>
+                    </div>
+                    <div><i class="devicon-ubuntu-plain text-4xl text-orange-300"></i>
+                        <div class="mt-2 text-xs">Ubuntu</div>
+                    </div>
+                    <div><i class="devicon-debian-plain text-4xl text-red-300"></i>
+                        <div class="mt-2 text-xs">Debian</div>
+                    </div>
+                    <div><i class="devicon-centos-plain text-4xl text-purple-300"></i>
+                        <div class="mt-2 text-xs">CentOS</div>
+                    </div>
+                    <div><i class="devicon-android-plain text-4xl text-green-300"></i>
+                        <div class="mt-2 text-xs">Android</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-emerald-400 mb-2">Deploying & Managing</h3>
+                <p class="text-zinc-500 text-sm mb-5">Infrastructure, networking and cloud services.</p>
+                <div class="grid grid-cols-4 gap-5 text-center">
+                    <div><i class="devicon-docker-plain text-4xl text-blue-300"></i>
+                        <div class="mt-2 text-xs">Docker</div>
+                    </div>
+                    <div><img src="https://cdn.simpleicons.org/proxmox/F97316" class="w-10 h-10 mx-auto" alt="Proxmox">
+                        <div class="mt-2 text-xs">Proxmox</div>
+                    </div>
+                    <div><img src="https://cdn.simpleicons.org/cloudflare/F38020" class="w-10 h-10 mx-auto"
+                            alt="Cloudflare">
+                        <div class="mt-2 text-xs">Cloudflare</div>
+                    </div>
+                    <div><img src="https://cdn.simpleicons.org/mikrotik/2D8CFF" class="w-10 h-10 mx-auto"
+                            alt="MikroTik">
+                        <div class="mt-2 text-xs">MikroTik</div>
+                    </div>
+                    <div><i class="devicon-nginx-original text-4xl text-green-400"></i>
+                        <div class="mt-2 text-xs">Nginx</div>
+                    </div>
+                    <div><i class="devicon-apache-plain text-4xl text-red-300"></i>
+                        <div class="mt-2 text-xs">Apache</div>
+                    </div>
+                    <div><i class="devicon-oracle-original text-4xl text-red-400"></i>
+                        <div class="mt-2 text-xs">Oracle</div>
+                    </div>
+                    <div><img src="https://cdn.simpleicons.org/googlecloud/4285F4" class="w-10 h-10 mx-auto"
+                            alt="Google Cloud">
+                        <div class="mt-2 text-xs">Google</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass glass-hover rounded-3xl p-7 shrink-0 w-[340px] snap-start">
+                <h3 class="font-semibold text-amber-400 mb-2">Connecting Hardware & Automation</h3>
+                <p class="text-zinc-500 text-sm mb-5">Software, devices, sensors and smart environments.</p>
+                <div class="grid grid-cols-4 gap-5 text-center">
+                    <div><i class="devicon-arduino-plain text-4xl text-cyan-300"></i>
+                        <div class="mt-2 text-xs">Arduino</div>
+                    </div>
+                    <div><img src="https://cdn.simpleicons.org/espressif/E7352C" class="w-10 h-10 mx-auto" alt="ESP">
+                        <div class="mt-2 text-xs">ESP</div>
+                    </div>
+                    <div><img src="https://cdn.simpleicons.org/raspberrypi/C51A4A" class="w-10 h-10 mx-auto"
+                            alt="Raspberry Pi">
+                        <div class="mt-2 text-xs">Raspberry Pi</div>
+                    </div>
+                    <div><img src="https://cdn.simpleicons.org/homeassistant/41BDF5" class="w-10 h-10 mx-auto"
+                            alt="Home Assistant">
+                        <div class="mt-2 text-xs">HA</div>
+                    </div>
+                    <div><img src="images/icons/tuya.svg" class="w-10 h-10 mx-auto invert dark:invert-0" alt="Tuya">
+                        <div class="mt-2 text-xs">Tuya</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="certificates" data-slider-container class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20 overflow-hidden">
-        <div class="flex items-end justify-between gap-6 mb-10"><div><h2 class="text-3xl font-bold">Training, Certifications & Project Evidence</h2><p class="text-zinc-400 mt-3 max-w-2xl">Formal training, technical qualifications, speaking engagements and certificates that support completed system-development work.</p></div><div class="hidden md:flex gap-3"><button onclick="scrollSlider(this,-1)" class="glass glass-hover w-12 h-12 rounded-2xl">←</button><button onclick="scrollSlider(this,1)" class="glass glass-hover w-12 h-12 rounded-2xl">→</button></div></div>
-        <div data-slider id="certSlider" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory hide-scrollbar">
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/Python Essentials 1.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Python Essentials 1"><div class="p-6"><div class="text-blue-400 text-sm">2025 • Cisco Networking Academy</div><h3 class="font-bold mt-2">Python Essentials 1</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/python.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Basic Coding Using Python"><div class="p-6"><div class="text-blue-400 text-sm">2025 • DICT • 32 Hours</div><h3 class="font-bold mt-2">Basic Coding Using Python</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/Operating_Systems_Basics.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Operating Systems Basics"><div class="p-6"><div class="text-blue-400 text-sm">2025 • Cisco NetAcad / DICT-ITU</div><h3 class="font-bold mt-2">Operating Systems Basics</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/Serverless-Architecture.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Serverless Architecture"><div class="p-6"><div class="text-blue-400 text-sm">2025 • DICT Region V</div><h3 class="font-bold mt-2">Serverless Architecture for Enhanced Public Service Delivery</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/CSS.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Computer Systems Servicing NC II"><div class="p-6"><div class="text-blue-400 text-sm">TESDA</div><h3 class="font-bold mt-2">Computer Systems Servicing NC II</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/CHS.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Computer Hardware Servicing NC II"><div class="p-6"><div class="text-blue-400 text-sm">TESDA</div><h3 class="font-bold mt-2">Computer Hardware Servicing NC II</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/EIM.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Electrical Installation and Maintenance NC II"><div class="p-6"><div class="text-blue-400 text-sm">TESDA</div><h3 class="font-bold mt-2">Electrical Installation & Maintenance NC II</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/K-12 Seminar-Workshop Speaker.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Seminar Speaker"><div class="p-6"><div class="text-blue-400 text-sm">2018</div><h3 class="font-bold mt-2">K-12 Seminar-Workshop — Speaker</h3><div class="text-zinc-400 mt-3">Polytechnic Institute of Tabaco</div></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/Dabarkads System.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="Dabarkads System"><div class="p-6"><div class="text-green-400 text-sm">Project Evidence</div><h3 class="font-bold mt-2">Dabarkads System Development</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/PITA Voting System Dev.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="PITA Voting System"><div class="p-6"><div class="text-green-400 text-sm">Project Recognition</div><h3 class="font-bold mt-2">PITA Voting System Development</h3></div></div>
-            <div class="glass glass-hover rounded-3xl overflow-hidden shrink-0 w-[300px] snap-start"><img src="images/certificates/PITA Election.jpg" onclick="openViewer(this.src)" class="w-full aspect-[4/3] object-cover" alt="PITA Election"><div class="p-6"><div class="text-green-400 text-sm">Project Evidence</div><h3 class="font-bold mt-2">Institutional Election Project</h3></div></div>
+    <section id="projects" class="max-w-7xl mx-auto px-5 lg:px-6 py-14">
+        <div class="mb-9">
+            <div class="section-kicker">Selected Work</div>
+            <h2 class="text-3xl lg:text-4xl font-bold mt-2">Systems built around real operational problems</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
+                <div class="h-56 overflow-hidden">
+                    <img src="images/projects/workflow-system.png" class="project-image w-full h-full object-cover"
+                        alt="Document Routing and Workflow System" onclick="openViewer(this.src)">
+                </div>
+                <div class="p-7">
+                    <div class="text-xs uppercase tracking-[.18em] text-blue-400">Government Workflow</div>
+                    <h3 class="text-2xl font-bold mt-2">Document Routing & Workflow System</h3>
+                    <p class="text-zinc-400 mt-4">
+                        Designed to improve routing visibility, accountability and coordination for physical documents
+                        moving
+                        through organizational processes.
+                    </p>
+                    <div class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
+                        <div class="chip rounded-xl p-3"><b>Problem:</b> difficult status tracking across offices</div>
+                        <div class="chip rounded-xl p-3"><b>Solution:</b> configurable routing and status history</div>
+                        <div class="chip rounded-xl p-3">Permissions, returns, approvals & audit trail</div>
+                        <div class="chip rounded-xl p-3">PHP • MariaDB • Docker • Nginx</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
+                <div class="h-56 overflow-hidden">
+                    <img src="images/projects/budget.png" class="project-image w-full h-full object-cover"
+                        alt="Budget information system" onclick="openViewer(this.src)">
+                </div>
+                <div class="p-7">
+                    <div class="text-xs uppercase tracking-[.18em] text-green-400">Government Operations</div>
+                    <h3 class="text-2xl font-bold mt-2">Budget & Operational Information Systems</h3>
+                    <p class="text-zinc-400 mt-4">
+                        Internal systems supporting obligation processing, reporting, document tracking, consolidated
+                        data and
+                        office workflow requirements.
+                    </p>
+                    <div class="mt-5 flex flex-wrap gap-2 text-sm">
+                        <span class="chip rounded-full px-3 py-2">Workflow</span>
+                        <span class="chip rounded-full px-3 py-2">Reporting</span>
+                        <span class="chip rounded-full px-3 py-2">Database</span>
+                        <span class="chip rounded-full px-3 py-2">Government Process</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
+                <div class="h-56 overflow-hidden">
+                    <img src="images/projects/waste-management.jpg" class="project-image w-full h-full object-cover"
+                        alt="Waste management platform" onclick="openViewer(this.src)">
+                </div>
+                <div class="p-7">
+                    <div class="text-xs uppercase tracking-[.18em] text-cyan-400">Mobile & Field Operations</div>
+                    <h3 class="text-2xl font-bold mt-2">Waste Management Platform</h3>
+                    <p class="text-zinc-400 mt-4">
+                        Mobile and centralized platform for field operations with offline-capable workflows,
+                        synchronization,
+                        mapping and reporting.
+                    </p>
+                    <div class="mt-5 flex flex-wrap gap-2 text-sm">
+                        <span class="chip rounded-full px-3 py-2">Android / Kotlin</span>
+                        <span class="chip rounded-full px-3 py-2">Offline Sync</span>
+                        <span class="chip rounded-full px-3 py-2">Maps</span>
+                        <span class="chip rounded-full px-3 py-2">Central Reporting</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
+                <div class="h-56 overflow-hidden">
+                    <img src="images/projects/lending.png" class="project-image w-full h-full object-cover"
+                        alt="Lending management system" onclick="openViewer(this.src)">
+                </div>
+                <div class="p-7">
+                    <div class="text-xs uppercase tracking-[.18em] text-violet-400">Business Systems</div>
+                    <h3 class="text-2xl font-bold mt-2">CashZone — Lending & Loan Management</h3>
+                    <p class="text-zinc-400 mt-4">
+                        Business-focused application supporting lending operations, customer records, transactions,
+                        monitoring
+                        and reporting.
+                    </p>
+                    <div class="mt-5 flex flex-wrap gap-2 text-sm">
+                        <span class="chip rounded-full px-3 py-2">Transactions</span>
+                        <span class="chip rounded-full px-3 py-2">Customer Records</span>
+                        <span class="chip rounded-full px-3 py-2">Reporting</span>
+                        <span class="chip rounded-full px-3 py-2">Database</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card glass glass-hover rounded-[32px] overflow-hidden md:col-span-2">
+                <div class="grid lg:grid-cols-[.85fr_1.15fr]">
+                    <div class="h-72 lg:h-auto overflow-hidden">
+                        <img src="images/projects/vending.jpg" class="project-image w-full h-full object-cover"
+                            alt="Smart vending and monitoring system" onclick="openViewer(this.src)">
+                    </div>
+                    <div class="p-7 lg:p-9">
+                        <div class="text-xs uppercase tracking-[.18em] text-amber-400">Embedded & Automation</div>
+                        <h3 class="text-2xl font-bold mt-2">Smart Vending & Monitoring Solutions</h3>
+                        <p class="text-zinc-400 mt-4 leading-7">
+                            Integrated software and hardware projects combining payment/coin mechanisms, controllers,
+                            device
+                            monitoring, remote reporting and automation — demonstrating the ability to bridge
+                            application
+                            development with electronics and field devices.
+                        </p>
+                        <div class="mt-5 flex flex-wrap gap-2 text-sm">
+                            <span class="chip rounded-full px-3 py-2">Arduino / ESP</span>
+                            <span class="chip rounded-full px-3 py-2">Remote Monitoring</span>
+                            <span class="chip rounded-full px-3 py-2">Automation</span>
+                            <span class="chip rounded-full px-3 py-2">Hardware Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section id="skills" class="max-w-7xl mx-auto px-5 lg:px-6 py-14">
+        <div class="mb-9">
+            <div class="section-kicker">Expertise</div>
+            <h2 class="text-3xl lg:text-4xl font-bold mt-2">
+                Capabilities grouped by what they deliver
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+
+            <!-- Software Engineering -->
+            <div class="glass rounded-3xl p-6">
+                <h3 class="font-bold text-blue-400">Software Engineering</h3>
+
+                <div class="flex flex-wrap gap-5 mt-5 text-center">
+                    <div title="PHP">
+                        <i class="devicon-php-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">PHP</div>
+                    </div>
+
+                    <div title="Go">
+                        <i class="devicon-go-original-wordmark colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Go</div>
+                    </div>
+
+                    <div title="C#">
+                        <i class="devicon-csharp-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">C#</div>
+                    </div>
+
+                    <div title="Visual Basic .NET">
+                        <i class="devicon-visualbasic-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">VB.NET</div>
+                    </div>
+
+                    <div title="Java">
+                        <i class="devicon-java-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Java</div>
+                    </div>
+
+                    <div title="Kotlin">
+                        <i class="devicon-kotlin-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Kotlin</div>
+                    </div>
+
+                    <div title="Python">
+                        <i class="devicon-python-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Python</div>
+                    </div>
+
+                    <div title="JavaScript">
+                        <i class="devicon-javascript-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">JavaScript</div>
+                    </div>
+                </div>
+
+                <p class="text-zinc-500 text-sm mt-5">
+                    REST APIs • backend services • full-stack applications
+                </p>
+            </div>
+
+            <!-- Databases -->
+            <div class="glass rounded-3xl p-6">
+                <h3 class="font-bold text-cyan-400">Databases & Data</h3>
+
+                <div class="flex flex-wrap gap-5 mt-5 text-center">
+                    <div title="MySQL">
+                        <i class="devicon-mysql-original colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">MySQL</div>
+                    </div>
+
+                    <div title="MariaDB">
+                        <i class="devicon-mariadb-original colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">MariaDB</div>
+                    </div>
+                </div>
+
+                <p class="text-zinc-500 text-sm mt-5">
+                    SQL design • administration • backup • recovery • reporting
+                </p>
+            </div>
+
+            <!-- Systems -->
+            <div class="glass rounded-3xl p-6">
+                <h3 class="font-bold text-green-400">Systems & Infrastructure</h3>
+
+                <div class="flex flex-wrap gap-5 mt-5 text-center">
+                    <div title="Linux">
+                        <i class="devicon-linux-plain text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Linux</div>
+                    </div>
+
+                    <div title="Windows">
+                        <i class="devicon-windows11-original colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Windows</div>
+                    </div>
+
+                    <div title="Docker">
+                        <i class="devicon-docker-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Docker</div>
+                    </div>
+
+                    <div title="Nginx">
+                        <i class="devicon-nginx-original colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Nginx</div>
+                    </div>
+
+                    <div title="Apache">
+                        <i class="devicon-apache-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Apache</div>
+                    </div>
+                </div>
+
+                <p class="text-zinc-500 text-sm mt-5">
+                    Virtualization • self-hosting • web servers • deployment
+                </p>
+            </div>
+
+            <!-- Networking -->
+            <div class="glass rounded-3xl p-6">
+                <h3 class="font-bold text-violet-400">Networking & Connectivity</h3>
+
+                <div class="flex flex-wrap gap-5 mt-5 text-center">
+                    <div title="Cloudflare">
+                        <i class="devicon-cloudflare-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Cloudflare</div>
+                    </div>
+
+                    <div title="SSH">
+                        <i class="devicon-ssh-original text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">SSH</div>
+                    </div>
+                </div>
+
+                <p class="text-zinc-500 text-sm mt-5">
+                    MikroTik • routing • DHCP • VPN/tunneling • LAN support
+                </p>
+            </div>
+
+            <!-- DevOps -->
+            <div class="glass rounded-3xl p-6">
+                <h3 class="font-bold text-orange-400">DevOps & Delivery</h3>
+
+                <div class="flex flex-wrap gap-5 mt-5 text-center">
+                    <div title="Git">
+                        <i class="devicon-git-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Git</div>
+                    </div>
+
+                    <div title="GitHub">
+                        <i class="devicon-github-original text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">GitHub</div>
+                    </div>
+
+                    <div title="Docker">
+                        <i class="devicon-docker-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Docker</div>
+                    </div>
+                </div>
+
+                <p class="text-zinc-500 text-sm mt-5">
+                    GitHub Actions • CI/CD • version control • Docker-based deployment
+                </p>
+            </div>
+
+            <!-- Embedded -->
+            <div class="glass rounded-3xl p-6">
+                <h3 class="font-bold text-amber-400">Embedded & Automation</h3>
+
+                <div class="flex flex-wrap gap-5 mt-5 text-center">
+                    <div title="Arduino">
+                        <i class="devicon-arduino-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Arduino</div>
+                    </div>
+
+                    <div title="Raspberry Pi">
+                        <i class="devicon-raspberrypi-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Raspberry Pi</div>
+                    </div>
+
+                    <div title="Android">
+                        <i class="devicon-android-plain colored text-4xl"></i>
+                        <div class="text-xs text-zinc-400 mt-1">Android</div>
+                    </div>
+                </div>
+
+                <p class="text-zinc-500 text-sm mt-5">
+                    ESP32 • sensors • Home Assistant • IoT • electrical integration
+                </p>
+            </div>
+
         </div>
     </section>
 
-    <section id="future" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20"><h2 class="text-3xl font-bold mb-3">Looking Ahead</h2><p class="text-zinc-400 leading-8 max-w-5xl">Curiosity continues to shape what I explore next. I am interested in deeper system-level technologies, secure infrastructure, automation, AI-assisted systems and practical digital services that solve real problems.</p><div class="mt-10 flex flex-wrap gap-3"><span class="glass px-5 py-3 rounded-2xl">🖥️ Operating Systems</span><span class="glass px-5 py-3 rounded-2xl">⚙️ Embedded Systems</span><span class="glass px-5 py-3 rounded-2xl">☁️ Infrastructure</span><span class="glass px-5 py-3 rounded-2xl">🏠 Smart Automation</span><span class="glass px-5 py-3 rounded-2xl">🔐 Security</span><span class="glass px-5 py-3 rounded-2xl">🤖 AI Systems</span></div></section>
+    <section id="evidence" class="max-w-7xl mx-auto px-5 lg:px-6 py-14">
+        <div class="mb-9">
+            <div class="section-kicker">Project Evidence & Recognition</div>
+            <h2 class="text-3xl lg:text-4xl font-bold mt-2">Delivered systems backed by third-party evidence</h2>
+            <p class="text-zinc-400 mt-3 max-w-3xl">
+                Certificates and recognitions tied to systems I developed or supported. These are presented separately
+                from training certificates because they document delivered work and professional accomplishments.
+            </p>
+        </div>
 
-    <section id="contact" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20"><div class="glass rounded-3xl p-8 lg:p-10"><h2 class="text-4xl font-bold">Let's Build Something</h2><p class="mt-4 text-zinc-300 max-w-2xl">Open for freelance software projects, international opportunities, IT solutions, government digital systems, automation and innovation.</p><div class="mt-8 flex flex-wrap gap-4"><a href="mailto:christian.borsal.bustamante@gmail.com" class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">Email</a><a href="https://github.com/tihloh" target="_blank" class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">GitHub</a><a href="https://linkedin.com/in/christian-bustamante-b1a345252" target="_blank" class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">LinkedIn</a><a href="https://www.facebook.com/5469686C6F68" target="_blank" class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">Facebook</a></div></div></section>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <article class="glass glass-hover rounded-3xl overflow-hidden">
+                <img src="images/certificates/Dabarkads System.jpg" class="w-full aspect-[4/3] object-cover"
+                    alt="Dabarkads system development certificate" onclick="openViewer(this.src)">
+                <div class="p-6">
+                    <div class="text-blue-400 text-sm">System Development Evidence</div>
+                    <h3 class="font-bold text-lg mt-2">Dabarkads Business System</h3>
+                    <p class="text-zinc-400 text-sm mt-3">Evidence connected to a delivered business system and my work
+                        as a computer programmer / system technician.</p>
+                </div>
+            </article>
+
+            <article class="glass glass-hover rounded-3xl overflow-hidden">
+                <img src="images/certificates/PITA Voting System Dev.jpg" class="w-full aspect-[4/3] object-cover"
+                    alt="Voting system development certificate" onclick="openViewer(this.src)">
+                <div class="p-6">
+                    <div class="text-green-400 text-sm">System Development Recognition</div>
+                    <h3 class="font-bold text-lg mt-2">Voting System Development</h3>
+                    <p class="text-zinc-400 text-sm mt-3">Recognition tied to the development of an institutional
+                        voting/election system.</p>
+                </div>
+            </article>
+
+            <article class="glass glass-hover rounded-3xl overflow-hidden">
+                <img src="images/certificates/PITA Election.jpg" class="w-full aspect-[4/3] object-cover"
+                    alt="Institutional election system recognition" onclick="openViewer(this.src)">
+                <div class="p-6">
+                    <div class="text-violet-400 text-sm">Project / Institutional Evidence</div>
+                    <h3 class="font-bold text-lg mt-2">Institutional Election Project</h3>
+                    <p class="text-zinc-400 text-sm mt-3">Additional evidence associated with the institutional election
+                        project and its use.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="training" class="max-w-7xl mx-auto px-5 lg:px-6 py-14">
+        <div class="mb-9">
+            <div class="section-kicker">Training & Certifications</div>
+            <h2 class="text-3xl lg:text-4xl font-bold mt-2">Relevant learning and technical qualifications</h2>
+            <p class="text-zinc-400 mt-3 max-w-3xl">
+                Focused on practical technical capability, public-service technology and continuing professional
+                development.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+            <div class="glass rounded-[32px] p-7">
+                <h3 class="text-xl font-bold text-blue-400">IT Training</h3>
+                <div class="mt-6 space-y-5">
+                    <div>
+                        <div class="font-semibold">Basic Coding Using Python — 32 hours</div>
+                        <div class="text-sm text-zinc-400">DICT Region V – Albay • 2025</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Python Essentials 1</div>
+                        <div class="text-sm text-zinc-400">Cisco Networking Academy • Certificate + Badge • 2025</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Operating Systems Basics</div>
+                        <div class="text-sm text-zinc-400">Cisco Networking Academy / DICT-ITU • 2025</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Serverless Architecture for Enhanced Public Service Delivery</div>
+                        <div class="text-sm text-zinc-400">DICT Region V • Government-agency use cases • 2025</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Basic ICT Database Management for MSMEs</div>
+                        <div class="text-sm text-zinc-400">DOST Region V • 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-[32px] p-7">
+                <h3 class="text-xl font-bold text-green-400">Technical Qualifications</h3>
+                <div class="mt-6 space-y-5">
+                    <div>
+                        <div class="font-semibold">Computer Systems Servicing NC II</div>
+                        <div class="text-sm text-zinc-400">TESDA</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Computer Hardware Servicing NC II</div>
+                        <div class="text-sm text-zinc-400">TESDA</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Electrical Installation & Maintenance NC II</div>
+                        <div class="text-sm text-zinc-400">TESDA</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-[32px] p-7">
+                <h3 class="text-xl font-bold text-violet-400">Professional Development</h3>
+                <div class="mt-6 space-y-5">
+                    <div>
+                        <div class="font-semibold">K to 12 Power Teaching Seminar-Workshop</div>
+                        <div class="text-sm text-zinc-400">Speaker • Polytechnic Institute of Tabaco • 2018</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Digital Transformation / MSME Programs</div>
+                        <div class="text-sm text-zinc-400">DOST Region V • 2024</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Gender Sensitivity Training for MSMEs</div>
+                        <div class="text-sm text-zinc-400">DOST Region V • 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-6">
+            <div class="glass glass-hover rounded-3xl overflow-hidden">
+                <div class="aspect-[4/3] flex items-center justify-center bg-white/5 p-6 text-center">
+                    <div>
+                        <div class="text-blue-400 text-sm">Cisco Networking Academy • Python Institute</div>
+                        <div class="text-2xl font-bold mt-3">Python Essentials 1</div>
+                        <div class="text-zinc-400 mt-2">Completed Oct. 3, 2025</div>
+                        <div class="text-xs text-zinc-500 mt-4">Certificate image will be displayed once added to the
+                            repository assets.</div>
+                    </div>
+                </div>
+                <div class="p-4 font-semibold">Python Essentials 1</div>
+            </div>
+            <div class="glass glass-hover rounded-3xl overflow-hidden">
+                <img src="images/certificates/Operating_Systems_Basics.jpg" class="w-full aspect-[4/3] object-cover"
+                    alt="Operating Systems Basics certificate" onclick="openViewer(this.src)">
+                <div class="p-4 font-semibold">Operating Systems Basics</div>
+            </div>
+            <div class="glass glass-hover rounded-3xl overflow-hidden">
+                <img src="images/certificates/Serverless-Architecture.jpg" class="w-full aspect-[4/3] object-cover"
+                    alt="Serverless Architecture certificate" onclick="openViewer(this.src)">
+                <div class="p-4 font-semibold">Serverless Architecture</div>
+            </div>
+            <div class="glass glass-hover rounded-3xl overflow-hidden">
+                <img src="images/certificates/CSS.jpg" class="w-full aspect-[4/3] object-cover"
+                    alt="Computer Systems Servicing certificate" onclick="openViewer(this.src)">
+                <div class="p-4 font-semibold">Computer Systems Servicing NC II</div>
+            </div>
+            <div class="glass glass-hover rounded-3xl overflow-hidden">
+                <img src="images/certificates/K-12 Seminar-Workshop Speaker.jpg"
+                    class="w-full aspect-[4/3] object-cover" alt="Seminar workshop speaker certificate"
+                    onclick="openViewer(this.src)">
+                <div class="p-4 font-semibold">Seminar Speaker</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="future" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+        <h2 class="text-3xl font-bold mb-3">Looking Ahead</h2>
+        <p class="text-zinc-400 leading-8 max-w-5xl">Curiosity continues to shape what I explore next. I am interested
+            in deeper system-level technologies, secure infrastructure, automation, AI-assisted systems and practical
+            digital services that solve real problems.</p>
+        <div class="mt-10 flex flex-wrap gap-3"><span class="glass px-5 py-3 rounded-2xl">🖥️ Operating
+                Systems</span><span class="glass px-5 py-3 rounded-2xl">⚙️ Embedded Systems</span><span
+                class="glass px-5 py-3 rounded-2xl">☁️ Infrastructure</span><span class="glass px-5 py-3 rounded-2xl">🏠
+                Smart Automation</span><span class="glass px-5 py-3 rounded-2xl">🔐 Security</span><span
+                class="glass px-5 py-3 rounded-2xl">🤖 AI Systems</span></div>
+    </section>
+
+    <section id="contact" class="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-20">
+        <div class="glass rounded-3xl p-8 lg:p-10">
+            <h2 class="text-4xl font-bold">Let's Build Something</h2>
+            <p class="mt-4 text-zinc-300 max-w-2xl">Open for freelance software projects, international opportunities,
+                IT solutions, government digital systems, automation and innovation.</p>
+            <div class="mt-8 flex flex-wrap gap-4"><a href="mailto:christian.borsal.bustamante@gmail.com"
+                    class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">Email</a><a
+                    href="https://github.com/tihloh" target="_blank"
+                    class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">GitHub</a><a
+                    href="https://linkedin.com/in/christian-bustamante-b1a345252" target="_blank"
+                    class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">LinkedIn</a><a
+                    href="https://www.facebook.com/5469686C6F68" target="_blank"
+                    class="glass glass-hover flex items-center gap-3 px-6 py-3 rounded-2xl">Facebook</a></div>
+        </div>
+    </section>
 
     <footer class="py-10 text-center text-sm text-zinc-500">© 2026 Christian Bustamante</footer>
-    <div id="imageViewer" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4"><button onclick="closeViewer()" class="absolute top-6 right-6 glass rounded-full w-12 h-12 text-xl">✕</button><img id="viewerImage" class="max-w-full max-h-full object-contain rounded-3xl"></div>
+    <div id="imageViewer"
+        class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4"><button
+            onclick="closeViewer()" class="absolute top-6 right-6 glass rounded-full w-12 h-12 text-xl">✕</button><img
+            id="viewerImage" class="max-w-full max-h-full object-contain rounded-3xl"></div>
     <script>
-        function scrollSlider(button, direction) { const container = button.closest('[data-slider-container]'); const slider = container.querySelector('[data-slider]'); if (!slider) return; slider.scrollBy({ left: direction * (slider.clientWidth * .8), behavior: 'smooth' }); }
-        function openViewer(src) { const viewer = document.getElementById('imageViewer'); document.getElementById('viewerImage').src = src; viewer.classList.remove('hidden'); viewer.classList.add('flex'); document.body.style.overflow = 'hidden'; }
-        function closeViewer() { const viewer = document.getElementById('imageViewer'); viewer.classList.add('hidden'); viewer.classList.remove('flex'); document.body.style.overflow = 'auto'; }
-        document.getElementById('imageViewer').addEventListener('click', function(e){ if(e.target.id === 'imageViewer') closeViewer(); });
-        document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeViewer(); });
+        function scrollSlider(button, direction) {
+            const container = button.closest('[data-slider-container]');
+            const slider = container.querySelector('[data-slider]');
+            if (!slider) return;
+            slider.scrollBy({
+                left: direction * (slider.clientWidth * .8),
+                behavior: 'smooth'
+            });
+        }
+
+        function openViewer(src) {
+            const viewer = document.getElementById('imageViewer');
+            document.getElementById('viewerImage').src = src;
+            viewer.classList.remove('hidden');
+            viewer.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeViewer() {
+            const viewer = document.getElementById('imageViewer');
+            viewer.classList.add('hidden');
+            viewer.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+        document.getElementById('imageViewer').addEventListener('click', function (e) {
+            if (e.target.id === 'imageViewer') closeViewer();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeViewer();
+        });
         const container = document.getElementById('fireflies');
-        function spawnDigit() { const el = document.createElement('div'); el.className = 'firefly'; el.textContent = Math.floor(Math.random() * 10); el.style.left = Math.random() * 100 + 'vw'; el.style.top = Math.random() * 100 + 'vh'; el.style.fontSize = (10 + Math.random() * 18) + 'px'; const life = 3000 + Math.random() * 4000; el.style.setProperty('--life', life + 'ms'); container.appendChild(el); setTimeout(() => el.remove(), life); }
-        setInterval(() => { if (container.children.length < 20) spawnDigit(); }, 500);
+
+        function spawnDigit() {
+            const el = document.createElement('div');
+            el.className = 'firefly';
+            el.textContent = Math.floor(Math.random() * 10);
+            el.style.left = Math.random() * 100 + 'vw';
+            el.style.top = Math.random() * 100 + 'vh';
+            el.style.fontSize = (10 + Math.random() * 18) + 'px';
+            const life = 3000 + Math.random() * 4000;
+            el.style.setProperty('--life', life + 'ms');
+            container.appendChild(el);
+            setTimeout(() => el.remove(), life);
+        }
+        setInterval(() => {
+            if (container.children.length < 20) spawnDigit();
+        }, 500);
     </script>
 </body>
+
 </html>
