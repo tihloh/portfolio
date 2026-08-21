@@ -1,6 +1,6 @@
 const partials = [
   'background', 'navigation', 'hero', 'about', 'credentials', 'experience',
-  'services', 'platforms', 'projects', 'technical-skills', 'evidence',
+  'services', 'projects', 'technical-skills', 'evidence',
   'training', 'future', 'contact', 'footer', 'image-viewer'
 ];
 
