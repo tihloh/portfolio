@@ -1,20 +1,50 @@
     <nav class="sticky top-0 z-50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-5 lg:px-6 pt-4">
-            <div class="glass rounded-3xl px-6 lg:px-8 min-h-16 py-3 flex items-center justify-between">
-                <a href="#hero" class="group">
-                    <h1 class="font-bold text-lg lg:text-xl transition group-hover:text-blue-400">Christian Bustamante
-                    </h1>
-                    <div class="text-xs text-zinc-400">Software Development • IT Systems • Infrastructure</div>
+            <div class="glass rounded-3xl px-5 lg:px-8 min-h-16 py-3 flex items-center justify-between gap-4">
+                <a href="#hero" class="group min-w-0">
+                    <h1 class="font-bold text-lg lg:text-xl transition group-hover:text-blue-400 truncate">Christian Bustamante</h1>
+                    <div class="text-xs text-zinc-400 hidden sm:block">Software Development • IT Systems • Infrastructure</div>
                 </a>
-                <div class="hidden lg:flex items-center gap-7 text-sm">
-                    <a href="#about" class="text-zinc-300 hover:text-blue-400 transition">About</a>
-                    <a href="#experience" class="text-zinc-300 hover:text-blue-400 transition">Journey</a>
-                    <a href="#skills" class="text-zinc-300 hover:text-blue-400 transition">Expertise</a>
+
+                <!-- Desktop navigation -->
+                <div class="hidden lg:flex items-center gap-5 xl:gap-7 text-sm whitespace-nowrap">
+                    <a href="#about" class="text-zinc-300 hover:text-blue-400 transition">Profile</a>
+                    <a href="#experience" class="text-zinc-300 hover:text-blue-400 transition">Experience</a>
                     <a href="#projects" class="text-zinc-300 hover:text-blue-400 transition">Projects</a>
-                    <a href="#platforms" class="text-zinc-300 hover:text-blue-400 transition">Tech</a>
-                    <a href="#certificates" class="text-zinc-300 hover:text-blue-400 transition">Certifications</a>
-                    <a href="#contact" class="glass px-5 py-2 rounded-2xl hover:border-blue-500 transition">Contact</a>
+                    <a href="#skills" class="text-zinc-300 hover:text-blue-400 transition">Expertise</a>
+                    <a href="#credentials" class="text-zinc-300 hover:text-blue-400 transition">Credentials</a>
+
+                    <details class="relative group">
+                        <summary class="list-none cursor-pointer text-zinc-300 hover:text-blue-400 transition flex items-center gap-1">
+                            More <span class="text-[10px] transition group-open:rotate-180">▼</span>
+                        </summary>
+                        <div class="absolute right-0 mt-4 w-52 glass rounded-2xl p-2 shadow-2xl">
+                            <a href="#evidence" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Project Evidence</a>
+                            <a href="#training" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Training</a>
+                            <a href="#future" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">What I’m Building Next</a>
+                        </div>
+                    </details>
+
+                    <a href="#contact" class="glass px-5 py-2 rounded-2xl hover:border-blue-500 hover:text-blue-400 transition">Contact</a>
                 </div>
+
+                <!-- Mobile / tablet navigation -->
+                <details class="relative lg:hidden group shrink-0">
+                    <summary class="list-none cursor-pointer glass rounded-2xl px-4 py-2 text-sm font-semibold hover:border-blue-500 transition flex items-center gap-2">
+                        Menu <span class="text-[10px] transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <div class="absolute right-0 mt-3 w-64 glass rounded-2xl p-2 shadow-2xl max-h-[75vh] overflow-auto">
+                        <a href="#about" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Profile</a>
+                        <a href="#experience" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Experience</a>
+                        <a href="#projects" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Projects</a>
+                        <a href="#skills" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Expertise</a>
+                        <a href="#credentials" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Credentials</a>
+                        <a href="#evidence" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Project Evidence</a>
+                        <a href="#training" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">Training</a>
+                        <a href="#future" class="block rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-blue-400 transition">What I’m Building Next</a>
+                        <a href="#contact" class="block rounded-xl px-4 py-3 text-blue-400 hover:bg-white/5 transition">Contact</a>
+                    </div>
+                </details>
             </div>
         </div>
     </nav>
