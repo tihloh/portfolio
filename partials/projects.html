@@ -6,17 +6,26 @@
 
         <div class="grid md:grid-cols-2 gap-6">
             <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
-                <div class="h-56 overflow-hidden">
-                    <img src="images/projects/workflow-system.png" class="project-image w-full h-full object-cover"
-                        alt="Document Routing and Workflow System" onclick="openViewer(this.src)">
+                <div class="h-56 overflow-hidden"><img src="images/projects/spms-ars.png" class="project-image w-full h-full object-cover" alt="SPMS Annual Report System" onclick="openViewer(this.src)"></div>
+                <div class="p-7">
+                    <div class="text-xs uppercase tracking-[.18em] text-fuchsia-400">Government Performance Management</div>
+                    <h3 class="text-2xl font-bold mt-2">SPMS-ARS — Performance & Annual Reporting System</h3>
+                    <p class="text-zinc-400 mt-4">Designed to simplify and accelerate the generation of consolidated government performance reports, particularly IPCR, DPCR and OPCR, while using AI to assist performance-data processing and reporting.</p>
+                    <div class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
+                        <div class="chip rounded-xl p-3"><b>Problem:</b> time-consuming consolidation of IPCR, DPCR & OPCR</div>
+                        <div class="chip rounded-xl p-3"><b>Solution:</b> automated consolidation and report generation</div>
+                        <div class="chip rounded-xl p-3"><b>AI Integration:</b> assists analysis, summarization & performance-data processing</div>
+                        <div class="chip rounded-xl p-3">PHP • MariaDB • Docker • Nginx • AI/LLM</div>
+                    </div>
                 </div>
+            </article>
+
+            <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
+                <div class="h-56 overflow-hidden"><img src="images/projects/workflow-system.png" class="project-image w-full h-full object-cover" alt="Document Routing and Workflow System" onclick="openViewer(this.src)"></div>
                 <div class="p-7">
                     <div class="text-xs uppercase tracking-[.18em] text-blue-400">Government Workflow</div>
                     <h3 class="text-2xl font-bold mt-2">Document Routing & Workflow System</h3>
-                    <p class="text-zinc-400 mt-4">
-                        Designed to improve routing visibility, accountability and coordination for physical documents
-                        moving through organizational processes.
-                    </p>
+                    <p class="text-zinc-400 mt-4">Designed to improve routing visibility, accountability and coordination for physical documents moving through organizational processes.</p>
                     <div class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
                         <div class="chip rounded-xl p-3"><b>Problem:</b> difficult status tracking across offices</div>
                         <div class="chip rounded-xl p-3"><b>Solution:</b> configurable routing and status history</div>
@@ -27,59 +36,41 @@
             </article>
 
             <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
-                <div class="h-56 overflow-hidden">
-                    <img src="images/projects/budget.png" class="project-image w-full h-full object-cover"
-                        alt="Budget information system" onclick="openViewer(this.src)">
-                </div>
+                <div class="h-56 overflow-hidden"><img src="images/projects/budget.png" class="project-image w-full h-full object-cover" alt="Budget and operational information system" onclick="openViewer(this.src)"></div>
                 <div class="p-7">
                     <div class="text-xs uppercase tracking-[.18em] text-green-400">Government Operations</div>
-                    <h3 class="text-2xl font-bold mt-2">Budget & Operational Information Systems</h3>
-                    <p class="text-zinc-400 mt-4">
-                        Supports day-to-day government budget processing by organizing obligations, fund-control data,
-                        reporting and document workflow into connected operational records.
-                    </p>
+                    <h3 class="text-2xl font-bold mt-2">Budget & Operational Information System</h3>
+                    <p class="text-zinc-400 mt-4">Originally developed for document routing and transaction tracking, then expanded with operational data entry and report generation. Because transactions are associated with the employees who process them, the accumulated records can also be organized and counted to support employee accomplishment and organizational performance reporting.</p>
                     <div class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
-                        <div class="chip rounded-xl p-3"><b>Problem:</b> fragmented budget records and repetitive processing</div>
-                        <div class="chip rounded-xl p-3"><b>Solution:</b> centralized workflow, records and reporting</div>
-                        <div class="chip rounded-xl p-3">Obligations, fund control, reports & document tracking</div>
-                        <div class="chip rounded-xl p-3">PHP • MySQL/MariaDB • Web-based Operations</div>
+                        <div class="chip rounded-xl p-3"><b>Problem:</b> difficult tracking of documents and operational transactions</div>
+                        <div class="chip rounded-xl p-3"><b>Solution:</b> centralized routing, transaction recording & reporting</div>
+                        <div class="chip rounded-xl p-3"><b>Additional capability:</b> employee activity, accomplishment & performance reports</div>
+                        <div class="chip rounded-xl p-3">PHP • MySQL/MariaDB • Web-based Government System</div>
                     </div>
                 </div>
             </article>
 
             <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
-                <div class="h-56 overflow-hidden">
-                    <img src="images/projects/waste-management.jpg" class="project-image w-full h-full object-cover"
-                        alt="Waste management platform" onclick="openViewer(this.src)">
-                </div>
+                <div class="h-56 overflow-hidden"><img src="images/projects/waste-management.jpg" class="project-image w-full h-full object-cover" alt="Waste management platform" onclick="openViewer(this.src)"></div>
                 <div class="p-7">
                     <div class="text-xs uppercase tracking-[.18em] text-cyan-400">Mobile & Field Operations</div>
                     <h3 class="text-2xl font-bold mt-2">Waste Management Platform</h3>
-                    <p class="text-zinc-400 mt-4">
-                        Connects field operations with a centralized system so collection and operational data can be
-                        recorded in the field, synchronized and used for mapping and reporting.
-                    </p>
+                    <p class="text-zinc-400 mt-4">Designed to digitize and organize waste-management field operations by capturing collection activities and operational data in the field, then bringing them into a centralized system for tracking, mapping and reporting.</p>
                     <div class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
-                        <div class="chip rounded-xl p-3"><b>Problem:</b> disconnected field records and limited connectivity</div>
-                        <div class="chip rounded-xl p-3"><b>Solution:</b> offline-capable mobile workflow with synchronization</div>
-                        <div class="chip rounded-xl p-3">Mapping, field data capture & central reporting</div>
-                        <div class="chip rounded-xl p-3">Android • Kotlin • Offline Sync • Maps</div>
+                        <div class="chip rounded-xl p-3"><b>Problem:</b> field activities and collection records are difficult to systematically record, track & consolidate</div>
+                        <div class="chip rounded-xl p-3"><b>Solution:</b> mobile field-data capture with centralized monitoring, mapping & reporting</div>
+                        <div class="chip rounded-xl p-3"><b>Additional capability:</b> offline operation & synchronization for convenient field use</div>
+                        <div class="chip rounded-xl p-3">Android • Kotlin • Mapping • Offline Sync • Centralized Data</div>
                     </div>
                 </div>
             </article>
 
             <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
-                <div class="h-56 overflow-hidden">
-                    <img src="images/projects/lending.png" class="project-image w-full h-full object-cover"
-                        alt="Lending management system" onclick="openViewer(this.src)">
-                </div>
+                <div class="h-56 overflow-hidden"><img src="images/projects/lending.png" class="project-image w-full h-full object-cover" alt="Lending management system" onclick="openViewer(this.src)"></div>
                 <div class="p-7">
                     <div class="text-xs uppercase tracking-[.18em] text-violet-400">Business Systems</div>
                     <h3 class="text-2xl font-bold mt-2">CashZone — Lending & Loan Management</h3>
-                    <p class="text-zinc-400 mt-4">
-                        Organizes lending operations around customer records, loan transactions, monitoring and reports
-                        so day-to-day account activity can be managed from one system.
-                    </p>
+                    <p class="text-zinc-400 mt-4">Organizes lending operations around customer records, loan transactions, monitoring and reports so day-to-day account activity can be managed from one system.</p>
                     <div class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
                         <div class="chip rounded-xl p-3"><b>Problem:</b> difficult tracking of borrowers, loans and transactions</div>
                         <div class="chip rounded-xl p-3"><b>Solution:</b> centralized lending and account management</div>
@@ -89,25 +80,17 @@
                 </div>
             </article>
 
-            <article class="project-card glass glass-hover rounded-[32px] overflow-hidden md:col-span-2">
-                <div class="grid lg:grid-cols-[.85fr_1.15fr]">
-                    <div class="h-72 lg:h-auto overflow-hidden">
-                        <img src="images/projects/vending.jpg" class="project-image w-full h-full object-cover"
-                            alt="Smart vending and monitoring system" onclick="openViewer(this.src)">
-                    </div>
-                    <div class="p-7 lg:p-9">
-                        <div class="text-xs uppercase tracking-[.18em] text-amber-400">Embedded & Automation</div>
-                        <h3 class="text-2xl font-bold mt-2">Smart Vending & Monitoring Solutions</h3>
-                        <p class="text-zinc-400 mt-4 leading-7">
-                            Bridges software and physical vending devices to automate payments and machine operations
-                            while providing remote visibility into device activity and status.
-                        </p>
-                        <div class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
-                            <div class="chip rounded-xl p-3"><b>Problem:</b> unattended devices are difficult to operate and monitor remotely</div>
-                            <div class="chip rounded-xl p-3"><b>Solution:</b> integrated controllers, payments and remote monitoring</div>
-                            <div class="chip rounded-xl p-3">Coin/payment mechanisms, automation & device reporting</div>
-                            <div class="chip rounded-xl p-3">Arduino • ESP • Software/Hardware Integration</div>
-                        </div>
+            <article class="project-card glass glass-hover rounded-[32px] overflow-hidden">
+                <div class="h-56 overflow-hidden"><img src="images/projects/vending.jpg" class="project-image w-full h-full object-cover" alt="Automated WiFi hotspot vending and monitoring system" onclick="openViewer(this.src)"></div>
+                <div class="p-7">
+                    <div class="text-xs uppercase tracking-[.18em] text-amber-400">Embedded & Automation</div>
+                    <h3 class="text-2xl font-bold mt-2">Smart Vending & WiFi Hotspot Monitoring</h3>
+                    <p class="text-zinc-400 mt-4">Designed to transform a ticket-based commercial WiFi hotspot business into a 24/7 unattended operation by automating customer access and payment handling while enabling remote monitoring and administration.</p>
+                    <div class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
+                        <div class="chip rounded-xl p-3"><b>Problem:</b> ticket-based hotspot service requires manual selling, supervision & on-site management</div>
+                        <div class="chip rounded-xl p-3"><b>Solution:</b> automated vending and access control for 24/7 unattended operation</div>
+                        <div class="chip rounded-xl p-3"><b>Remote capability:</b> monitoring, administration, device status & operational control</div>
+                        <div class="chip rounded-xl p-3">Arduino • ESP • Networking • Remote Monitoring • Software/Hardware Integration</div>
                     </div>
                 </div>
             </article>
