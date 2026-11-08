@@ -1,81 +1,62 @@
-name: CI
+name: Build and deploy portfolio
 
 on:
   push:
-    branches:
-      - develop
-      - master
-  pull_request:
-    branches:
-      - master
+    branches: [master]
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: portfolio-pages
+  cancel-in-progress: false
 
 jobs:
-  validate:
-    name: Validate portfolio
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout master
         uses: actions/checkout@v4
 
-      - name: Verify required files
+      - name: Generate complete HTML
+        run: python3 scripts/build_portfolio.py
+
+      - name: Validate generated HTML and all internal links
+        run: python3 scripts/build_portfolio.py --check
+
+      - name: Commit generated index.html on master
         run: |
-          test -f index.html
-          test -f CNAME
-          test -d images
+          if ! git diff --quiet -- index.html; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.html
+            git commit -m "build: generate static portfolio homepage [skip ci]"
+            git push origin HEAD:master
+          else
+            echo "Generated index.html is already current."
+          fi
 
-      - name: Validate HTML structure
+      - name: Prepare clean site for GitHub Pages
         run: |
-          python3 - <<'PY'
-          from html.parser import HTMLParser
-          from pathlib import Path
+          mkdir -p _site
+          cp index.html CNAME _site/
+          cp -R images js _site/
 
-          class Validator(HTMLParser):
-              pass
+      - name: Upload static website artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
-          html = Path('index.html').read_text(encoding='utf-8')
-          parser = Validator()
-          parser.feed(html)
-          parser.close()
-
-          required = [
-              '<title>Christian Bustamante | Portfolio</title>',
-              'id="about"',
-              'id="skills"',
-              'id="projects"',
-              'id="platforms"',
-              'id="contact"',
-          ]
-
-          missing = [item for item in required if item not in html]
-          if missing:
-              raise SystemExit('Missing required markup: ' + ', '.join(missing))
-
-          print('HTML parsed successfully and required sections are present.')
-          PY
-
-      - name: Check local asset references
-        run: |
-          python3 - <<'PY'
-          import re
-          from pathlib import Path
-
-          html = Path('index.html').read_text(encoding='utf-8')
-          refs = re.findall(r'(?:src|href)=["\']([^"\']+)["\']', html)
-          missing = []
-
-          for ref in refs:
-              if ref.startswith(('http://', 'https://', '#', 'mailto:', 'tel:', 'javascript:')):
-                  continue
-              clean = ref.split('?', 1)[0].split('#', 1)[0]
-              if clean and not Path(clean).exists():
-                  missing.append(ref)
-
-          if missing:
-              raise SystemExit('Missing local assets: ' + ', '.join(sorted(set(missing))))
-
-          print('All local asset references exist.')
-          PY
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
