@@ -19,22 +19,27 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v4
 
-      - name: Generate complete HTML
-        run: python3 scripts/build_portfolio.py
+      - name: Generate all complete HTML pages from partials
+        run: python3 scripts/build_portfolio.py --all
 
-      - name: Validate generated HTML and all internal links
-        run: python3 scripts/build_portfolio.py --check
+      - name: Validate every generated page, anchor and local asset
+        run: python3 scripts/build_portfolio.py --all --check
 
-      - name: Commit generated index.html on master
+      - name: Commit generated static pages on master
         run: |
-          if ! git diff --quiet -- index.html; then
+          git add -- index.html
+          for config in pages/*/page.json; do
+            page="$(basename "$(dirname "$config")")"
+            git add -- "$page/index.html"
+          done
+
+          if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add index.html
-            git commit -m "build: generate static portfolio homepage [skip ci]"
+            git commit -m "build: generate all static portfolio pages [skip ci]"
             git push origin HEAD:master
           else
-            echo "Generated index.html is already current."
+            echo "All generated HTML pages are already current."
           fi
 
       - name: Prepare clean site for GitHub Pages
@@ -42,6 +47,11 @@ jobs:
           mkdir -p _site
           cp index.html CNAME _site/
           cp -R images js _site/
+          for config in pages/*/page.json; do
+            page="$(basename "$(dirname "$config")")"
+            mkdir -p "_site/$page"
+            cp "$page/index.html" "_site/$page/index.html"
+          done
 
       - name: Upload static website artifact
         uses: actions/upload-pages-artifact@v3
