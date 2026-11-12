@@ -1,0 +1,16 @@
+{
+  "title": "Christian Bustamante | Software Engineering",
+  "description": "I develop database-backed applications, workflow systems, reporting tools, and software integrations with an emphasis on maintainability and dependable operations.",
+  "sections": [
+    "shared/background",
+    "shared/navigation",
+    "hero",
+    "about",
+    "experience",
+    "projects",
+    "skills",
+    "shared/contact",
+    "shared/footer",
+    "shared/image-viewer"
+  ]
+}

@@ -24,3 +24,25 @@ Each push to `master` starts GitHub Actions. It validates and assembles the part
 If the workflow cannot push the generated HTML, check repository Actions permissions and branch protection. Commits from the workflow's default token do not start an infinite workflow loop.
 
 The existing custom domain is set in `CNAME`.
+
+## Specialized portfolio pages (source structure)
+
+The general homepage and existing build behavior remain intact. Six targeted pages
+are maintained as separate sets of editable files in `pages/<page>/partials/`
+with ordered sections defined in each `pages/<page>/page.json`.
+
+Shared navigation, contact, footer, background, and image-viewer components are in
+`shared/`. Selected pages can also include the existing `partials/credentials.html`.
+
+Build and validate all seven HTML files locally:
+
+```bash
+python3 scripts/build_portfolio.py --all
+python3 scripts/build_portfolio.py --all --check
+python3 scripts/build_portfolio.py --page developer
+```
+
+The original `python3 scripts/build_portfolio.py` and `--check` commands still
+build/check only the general homepage. The current GitHub Actions workflow and
+GitHub Pages packaging have **not** yet been updated to generate/deploy the six
+specialized pages. That deployment integration is a separate step.

@@ -1,0 +1,16 @@
+{
+  "title": "Christian Bustamante | IT Infrastructure",
+  "description": "My practical IT work includes Linux and Windows servers, web application hosting, database operations, networks, workstation support and incident troubleshooting.",
+  "sections": [
+    "shared/background",
+    "shared/navigation",
+    "hero",
+    "about",
+    "experience",
+    "projects",
+    "skills",
+    "shared/contact",
+    "shared/footer",
+    "shared/image-viewer"
+  ]
+}

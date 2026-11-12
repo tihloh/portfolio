@@ -1,0 +1,16 @@
+{
+  "title": "Christian Bustamante | Automation & IoT",
+  "description": "My projects explore unattended services, device monitoring, software-to-hardware integration and ways to automate processes beyond the browser.",
+  "sections": [
+    "shared/background",
+    "shared/navigation",
+    "hero",
+    "about",
+    "experience",
+    "projects",
+    "skills",
+    "shared/contact",
+    "shared/footer",
+    "shared/image-viewer"
+  ]
+}

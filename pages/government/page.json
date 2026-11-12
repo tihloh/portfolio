@@ -1,0 +1,17 @@
+{
+  "title": "Christian Bustamante | Government IT",
+  "description": "I work at the intersection of government operations and technology: budget processes, document routing, performance reporting, database operations and technical support.",
+  "sections": [
+    "shared/background",
+    "shared/navigation",
+    "hero",
+    "about",
+    "experience",
+    "projects",
+    "skills",
+    "partials/credentials",
+    "shared/contact",
+    "shared/footer",
+    "shared/image-viewer"
+  ]
+}

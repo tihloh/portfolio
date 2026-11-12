@@ -1,0 +1,16 @@
+{
+  "title": "Christian Bustamante | Business Solutions",
+  "description": "I build systems for lending, sales, inventory, reporting and operational automation, focusing on the everyday tasks businesses need to manage reliably.",
+  "sections": [
+    "shared/background",
+    "shared/navigation",
+    "hero",
+    "about",
+    "experience",
+    "projects",
+    "skills",
+    "shared/contact",
+    "shared/footer",
+    "shared/image-viewer"
+  ]
+}

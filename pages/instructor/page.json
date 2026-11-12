@@ -1,0 +1,17 @@
+{
+  "title": "Christian Bustamante | Programming Instructor",
+  "description": "I bring long-term software development experience into technical instruction, connecting programming concepts to the kinds of systems and challenges students encounter outside the classroom.",
+  "sections": [
+    "shared/background",
+    "shared/navigation",
+    "hero",
+    "about",
+    "experience",
+    "projects",
+    "skills",
+    "partials/credentials",
+    "shared/contact",
+    "shared/footer",
+    "shared/image-viewer"
+  ]
+}
